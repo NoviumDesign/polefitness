@@ -1,2 +1,8 @@
 $medium-screen-up: 640em;
 $large-screen-up: 640em;
+
+$susy: (
+  global-box-sizing: border-box,
+  columns: 12,
+  gutters: .56
+);

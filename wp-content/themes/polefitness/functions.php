@@ -111,6 +111,18 @@ function polefitness_widgets_init() {
 add_action( 'widgets_init', 'polefitness_widgets_init' );
 
 /**
+ * Adjust image sizes for this webpage
+ */
+
+add_image_size ( 'front_page_promo', 716, 350);
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function polefitness_scripts() {

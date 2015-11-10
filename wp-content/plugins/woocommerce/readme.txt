@@ -3,7 +3,7 @@ Contributors: automattic, mikejolley, jameskoster, claudiosanches, royho, woothe
 Tags: ecommerce, e-commerce, commerce, woothemes, wordpress ecommerce, affiliate, store, sales, sell, shop, shopping, cart, checkout, configurable, variable, widgets, reports, download, downloadable, digital, inventory, stock, reports, shipping, tax
 Requires at least: 4.1
 Tested up to: 4.3
-Stable tag: 2.4.7
+Stable tag: 2.4.10
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -80,7 +80,7 @@ When you download WooCommerce, you join a community of more than a million store
 
 If you’re interested in contributing to WooCommerce we’ve got more than 350 contributors, and there’s always room for more. Head over to the [WooCommerce GitHub Repository](https://github.com/woothemes/woocommerce) to find out how you can pitch in.
 
-Want to add a new language to WooCommerce? Swell! You can contribute through [Transifex](https://www.transifex.com/woothemes/woocommerce/).
+Want to add a new language to WooCommerce? Swell! You can contribute via [translate.wordpress.org](http://translate.wordpress.org/projects/wp-plugins/woocommerce).
 
 And, finally, consider joining or spearheading a WooCommerce Meetup locally, more about those [here](http://www.woothemes.com/woocommerce/meetups/).
 
@@ -157,6 +157,44 @@ Yes you can! Join in on our [GitHub repository](http://github.com/woothemes/wooc
 6. A product archive (grid).
 
 == Changelog ==
+
+= 2.4.10 - 10/11/2015 =
+* Fix - Geo IP - Correctly parse .dat files.
+* Fix - Geo IP - Ensure WC_Logger class exists before logging errors.
+* Fix - Geo IP - Prevent notices in ipv6 methods.
+* Tweak - Add information about credit card address for Simplify Commerce.
+
+= 2.4.9 - 09/11/2015 =
+* Fix - Check abspath exists in more files to prevent errors on direct access.
+* Fix - Hide SQL errors during ajax requests.
+* Fix - Fixed redirection loop on customizer screen.
+* Fix - Improved error handling in WC_Geo_IP.
+* Fix - Bulk edit sale prices.
+* Fix - Check for child themes in System Status.
+* Fix - API - Warnings when create attributes.
+* Fix - System Report: Template version check path.
+* Fix - Potential XSS within price.php fixed with escape on get_price() (would require edit/admin permissions to take advantage of). Discovered by FortiGuard Labs (http://www.fortiguard.com/). Template version has been bumped.
+
+= 2.4.8 - 26/10/2015 =
+* Fix - Help tips in variations admin.
+* Fix - API - Fixed customer count method.
+* Fix - Locale switching for city field.
+* Fix - Notice in wc_nav_menu_items when endpoint is not set.
+* Fix - Loading of correct variation prices when display is true and false in the same page load.
+* Fix - Shipping priority for methods with colons in the name.
+* Fix - Saving of passwords with '&' inside.
+* Fix - Remove double escaping of coupon descriptions.
+* Fix - Settings API default value should not apply if value of option is 0 .
+* Fix - Avoid potential PHP Fatals by avoiding premature script enqueues.
+* Fix - Pass mimes when checking file type .
+* Fix - Reset shipping totals before calculation to prevent totals being used incorrectly.
+* Fix - API - Corrected how attributes terms saves non-latin characters.
+* Fix - API - Variations price sync.
+* Fix - API - Fixed lost variable products data when create/edit an order.
+* Tweak - Add trailing slash in get_page_uris to reduce likelihood of conflicts.
+* Tweak - API - Added refunded_item_id on GET orders/<id>/refunds endpoint.
+* Tweak - API - Allow variable products to get retrieved by SKU.
+* Tweak - API - Allow edit variations without define the product type to variable.
 
 = 2.4.7 - 21/09/2015 =
 * Fix - Handle Switzerland in get_european_union_countries.
