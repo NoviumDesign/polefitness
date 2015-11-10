@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*
+Theme Name: polefitness
+Author: Anton Kjörck Lindén
+Author URI: http://www.noviumdesign.se
+Description: A theme for polefitness
+Version: 1.0.0
+License: Private
+Text Domain: polefitness
+*/
+
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/susy/sass/susy";
+@import "../bower_components/compass-breakpoint/stylesheets/breakpoint";
+
+@import "normalize";
+@import "base/base";
+
+@import "layouts/default";
+
+@import "components/desktop-navigation";
+@import "components/header";
