@@ -19,6 +19,11 @@ Text Domain: polefitness
 @import "layouts/default";
 
 @import "views/home";
+@import "views/subpage";
+@import "views/blogfeed";
+@import "views/blogpost";
 
 @import "components/desktop-navigation";
 @import "components/header";
+@import "components/sidebar";
+@import "components/footer";

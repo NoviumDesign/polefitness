@@ -1,0 +1,27 @@
+.subpage-content 
+  
+  .entry-content
+    +span(full)
+
+    +breakpoint($medium-screen-up)
+      +span(8 of 12)
+
+  .entry-header
+    margin-top: -$container-padding
+    margin-left: -$container-padding
+    margin-right: -$container-padding
+    background-color: $blue
+    background-position: center
+    background-size: cover
+    text-align: center
+    padding: 75px 0
+
+    h1
+      @extend .condensed
+      font-size: $huge-font-size
+      color: #fff
+      margin: 0
+
+  // to avoid that the sidebar gets pushed down compared to text content
+  .hentry
+    margin: 0

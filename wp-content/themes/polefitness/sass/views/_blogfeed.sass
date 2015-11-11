@@ -1,0 +1,34 @@
+.blogfeed-content
+
+  .blog-header
+    margin-top: -$container-padding
+    margin-left: -$container-padding
+    margin-right: -$container-padding
+    background-color: $blue
+    background-position: center
+    background-size: cover
+    text-align: center
+    padding: 75px 0
+    margin-bottom: 20px
+
+    h1
+      @extend .condensed
+      color: #fff
+      font-size: $huge-font-size
+      color: #fff
+      margin: 0
+  
+  article
+    +span(full)
+
+    +breakpoint($medium-screen-up)
+      +span(6 of 12)
+
+      &:nth-child(2n+1)
+        clear: left
+
+      &:nth-child(2n+2)
+        +span(6 of 12 last)
+
+  .entry-title a
+    color: $base-font-color

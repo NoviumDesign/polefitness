@@ -16,6 +16,26 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
+
+
+    <div class="footer-top">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="<?php header_image() ?>">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="footer-bottom">
+      <div class="footer-content">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+      </div>
+    </div>
+
+
+
 	</footer>
 </div><!-- #page -->
 

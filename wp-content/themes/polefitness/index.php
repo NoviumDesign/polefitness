@@ -14,8 +14,16 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area blogfeed-content">
 		<main id="main" class="site-main" role="main">
+
+
+
+		<div class="blog-header">
+			<h1>Nyheter</h1>
+		</div>
+
+
 
 		<?php if ( have_posts() ) : ?>
 
@@ -51,5 +59,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

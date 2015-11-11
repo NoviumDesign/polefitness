@@ -10,9 +10,26 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+
+
+
+	<?php if (has_post_thumbnail( $post->ID ) ): ?>
+		<?php
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+			$thumb_url = $thumb_url_array[0];
+		?>
+	<?php endif; ?>
+
+	<header class="entry-header" 
+		<?php if (has_post_thumbnail( $post->ID ) ): ?>
+			style="background-image:url('<?php echo $thumb_url ?>')"
+		<?php endif; ?>
+	>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+
+
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -23,6 +40,8 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+
+
 
 	<footer class="entry-footer">
 		<?php
@@ -37,5 +56,8 @@
 			);
 		?>
 	</footer><!-- .entry-footer -->
+
+
+
 </article><!-- #post-## -->
 

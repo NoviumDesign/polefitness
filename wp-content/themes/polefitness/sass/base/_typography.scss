@@ -13,9 +13,18 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  font-size: $base-font-size;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0 0 em(5px);
+  font-weight: initial;
+}
+
+h1 {
+  font-family: $base-font-family;
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
 }
 
 p {
@@ -32,6 +41,25 @@ a {
   &:hover {
     color: shade($action-color, 25%);
   }
+
+  &.read-more {
+    display: block;
+    border-top: 1px solid $action-color;
+    padding-top: 2px;
+    transition: all $base-duration $base-timing;
+
+
+    &:hover,
+    &:focus {
+      color: lighten($action-color, 20%);
+      border-color: lighten($action-color, 20%);
+    }
+  }
+}
+
+.condensed {
+  font-family: $condensed-font-family;
+  text-transform: uppercase;
 }
 
 hr {

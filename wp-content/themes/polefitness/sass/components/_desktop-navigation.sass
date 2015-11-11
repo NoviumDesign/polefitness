@@ -1,5 +1,4 @@
 .main-navigation
-  clear: both
   display: block
   float: right
 
@@ -15,18 +14,23 @@
   margin-right: em(18px)
 
 .main-navigation a
+  @extend .condensed
   display: block
   text-decoration: none
   color: #FFFFFF
 
 .main-navigation ul ul
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2)
-  background-color: $blue
+  background-color: #fff
+  padding: 10px
   float: left
   position: absolute
   top: 1.5em
   left: -999em
   z-index: 99999
+
+  a
+    color: $base-font-color
 
 .main-navigation ul ul ul
   left: -999em

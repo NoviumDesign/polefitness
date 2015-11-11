@@ -1,10 +1,36 @@
 .home
+
   .promo
     +clearfix
-    .left
-      +span(8 of 12)
+    margin-bottom: gutter()
+
     .right
-      +span(last 4 of 12)
+      +span(full)
+
+      h3
+        font-size: $h1-font-size
+
+      +breakpoint($medium-screen-up)
+        +span(6 of 12 last)
+
+      +breakpoint($large-screen-up)
+        +span(4 of 12 last)
+
+    img
+      display: block
+
   .boxes
-    > div
+    +span(full)
+    margin-bottom: gutter()
+
+    > .box
       +gallery(4 of 12)
+
+      h2
+        @extend .condensed
+
+  .front-page-content, .promo .left
+    +span(full)
+
+      +breakpoint($medium-screen-up)
+        +span(8 of 12)

@@ -1,5 +1,5 @@
-$medium-screen-up: 640em;
-$large-screen-up: 640em;
+$medium-screen-up: em(600px);
+$large-screen-up: em(900px);
 
 $susy: (
   global-box-sizing: border-box,

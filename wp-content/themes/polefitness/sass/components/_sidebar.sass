@@ -1,0 +1,10 @@
+.widget
+  +span(full)
+  background-color: $light-blue
+  padding: 20px
+
+  +breakpoint($medium-screen-up)
+    +span(4 of 12 last)
+
+  .widget-title
+    @extend .condensed
