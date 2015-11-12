@@ -13,3 +13,13 @@ body
 .site-content
   background-color: rgba(255, 255, 255, 0.9)
   padding: $container-padding
+
+#subpage #primary,
+.home #primary
+  +breakpoint($medium-screen-up)
+    +span(7 of 12)
+
+  +breakpoint($large-screen-up)
+    +span(8 of 12)
+.main
+  +clearfix

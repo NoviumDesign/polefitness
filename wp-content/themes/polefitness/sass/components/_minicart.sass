@@ -1,0 +1,26 @@
+.minicart-wrapper
+  +clearfix
+  position: relative
+
+.site-header-cart,
+.site-header-cart > li
+  +clearfix
+
+.cart-contents
+  float: right
+
+.widget_shopping_cart
+  display: none
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2)
+  background-color: #fff
+  padding: 10px
+  margin-top: -1px
+
+.site-header-cart:hover
+  .widget_shopping_cart
+    display: block
+    position: absolute
+    z-index: 9999
+
+.cart-contents
+  color: #FFFFFF

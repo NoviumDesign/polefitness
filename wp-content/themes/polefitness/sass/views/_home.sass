@@ -26,7 +26,7 @@
       display: block
 
   .boxes
-    +span(full)
+    +clearfix
     margin-bottom: gutter()
 
     > .box
@@ -45,7 +45,7 @@
         width: 100%
         margin-bottom: em(6px)
 
-  .front-page-content, .promo .left
+  .promo .left
     +span(full)
 
       +breakpoint($medium-screen-up)
