@@ -1,8 +1,11 @@
 .site-header
   background-color: #FFFFFF
   padding: 20px
-  margin-top: 30px
+  position: relative
   background-color: $blue
+
+  +breakpoint($medium-screen-up)
+    margin-top: 30px
 
   .site-branding
     float: left

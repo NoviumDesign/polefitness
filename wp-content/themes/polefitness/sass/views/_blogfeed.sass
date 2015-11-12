@@ -25,10 +25,19 @@
       +span(6 of 12)
 
       &:nth-child(2n+1)
-        clear: left
+        clear: right
 
       &:nth-child(2n+2)
         +span(6 of 12 last)
 
-  .entry-title a
-    color: $base-font-color
+  .entry-header
+    margin-bottom: 8px
+
+    .entry-title 
+      margin-bottom: 3px
+
+      a
+        color: $base-font-color
+
+  .entry-content
+    margin: 0

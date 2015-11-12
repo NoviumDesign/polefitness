@@ -2,14 +2,19 @@
   
   .entry-content
     +span(full)
+    margin-top: 0
 
     +breakpoint($medium-screen-up)
+      +span(7 of 12)
+
+    +breakpoint($large-screen-up)
       +span(8 of 12)
 
   .entry-header
     margin-top: -$container-padding
     margin-left: -$container-padding
     margin-right: -$container-padding
+    margin-bottom: 20px
     background-color: $blue
     background-position: center
     background-size: cover

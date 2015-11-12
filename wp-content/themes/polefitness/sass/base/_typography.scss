@@ -12,14 +12,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
+  font-family: $base-font-family;
   line-height: $heading-line-height;
-  margin: 0 0 em(5px);
+  margin: 0 0 em(4px);
   font-weight: initial;
 }
 
 h1 {
-  font-family: $base-font-family;
   font-size: $h1-font-size;
 }
 

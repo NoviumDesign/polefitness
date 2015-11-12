@@ -10,8 +10,14 @@
       h3
         font-size: $h1-font-size
 
+      p
+        margin: 0
+
+      .button
+        margin-top: 0.75em
+
       +breakpoint($medium-screen-up)
-        +span(6 of 12 last)
+        +span(5 of 12 last)
 
       +breakpoint($large-screen-up)
         +span(4 of 12 last)
@@ -24,13 +30,29 @@
     margin-bottom: gutter()
 
     > .box
-      +gallery(4 of 12)
+      +span(full)
+
+      +breakpoint($small-screen-only)
+        margin-bottom: 20px
+
+      +breakpoint($medium-screen-up)
+        +gallery(4 of 12)
 
       h2
         @extend .condensed
+
+      img
+        width: 100%
+        margin-bottom: em(6px)
 
   .front-page-content, .promo .left
     +span(full)
 
       +breakpoint($medium-screen-up)
+        +span(7 of 12)
+
+      +breakpoint($large-screen-up)
         +span(8 of 12)
+
+  .front-page-content .entry-content
+    margin: 0

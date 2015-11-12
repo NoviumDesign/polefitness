@@ -38,21 +38,21 @@ get_header(); ?>
 
           <a href="<?php the_field('box_1_link'); ?>"><img src="<?php the_field('box_1_img'); ?>"></a>
           <?php the_field('box_1_text'); ?>
-          <a class="read-more" href="<?php the_field('box_1_link'); ?>">Läs mer</a>
+          <a href="<?php the_field('box_1_link'); ?>">Läs mer</a>
 
         </div>
         <div class="box">
 
           <a href="<?php the_field('box_1_link'); ?>"><img src="<?php the_field('box_2_img'); ?>"></a>
           <?php the_field('box_2_text'); ?>
-          <a class="read-more" href="<?php the_field('box_2_link'); ?>">Läs mer</a>
+          <a href="<?php the_field('box_2_link'); ?>">Läs mer</a>
 
         </div>
         <div class="box">
 
           <a href="<?php the_field('box_1_link'); ?>"><img src="<?php the_field('box_3_img'); ?>"></a>
           <?php the_field('box_3_text'); ?>
-          <a class="read-more" href="<?php the_field('box_3_link'); ?>">Läs mer</a>
+          <a href="<?php the_field('box_3_link'); ?>">Läs mer</a>
 
         </div>
       </section>

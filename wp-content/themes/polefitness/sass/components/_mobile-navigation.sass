@@ -1,0 +1,76 @@
+$menu-stroke-height: 2px
+$menu-stroke-width: 20px
+
+.menu-toggle
+  background: none
+  position: absolute
+  top: 20px
+  right: 20px
+  display: inline-block
+  height: 10px+$menu-stroke-height*2
+  width: $menu-stroke-width
+  cursor: pointer
+  float: right
+  margin-top: 24px
+  padding: 0
+  z-index: 99
+
+  +breakpoint($medium-screen-up)
+    display: none
+
+  &:hover, &:focus
+    background: none
+    outline: none
+
+  &:before
+    content: ""
+    background: #fff
+    height: $menu-stroke-height
+    width: $menu-stroke-width
+    position: absolute 
+    top: 0
+    left: 0
+    display: block 
+    +transition(all linear 0.2s)
+  
+  &:after
+    content: "" 
+    background: #fff 
+    height: $menu-stroke-height
+    width: $menu-stroke-width
+    position: absolute 
+    top: 10px
+    left: 0
+    display: block 
+    +transition(all linear 0.2s)
+  
+  &[aria-expanded="true"]
+    &:before
+      transform: rotate(45deg) 
+      top: 0
+      width: $menu-stroke-width
+
+    &:after
+      transform: rotate(-45deg) 
+      top: 0
+      width: $menu-stroke-width
+
++breakpoint($small-screen-only)
+  .main-navigation.toggled
+    float: right
+    clear: left
+    text-align: right
+
+    ul li
+      float: none
+      clear: left
+      margin-right: 0
+    a
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+
+      padding: em(3px) 0
+      line-height: 0.93
+
+  .menu-huvudmeny-container > ul > li
+    margin-bottom: 8px

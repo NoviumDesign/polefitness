@@ -1,6 +1,6 @@
 // Typography
 $base-font-family: 'Domine-Regular', serif;
-$heading-font-family: 'Domine-Bold', serif;
+$heading-font-family: $base-font-family;
 $condensed-font-family: 'HelveticaNeue-CondensedBold';
 
 // Font Sizes
@@ -24,7 +24,7 @@ $container-padding: 20px;
 // Colors
 $blue: #489BFF;
 $light-blue: #DDE8F7;
-$green: #62BB8D;
+$green: #3ACE7C;
 $dark-gray: #323232;
 $medium-gray: #404040;
 $light-gray: #ddd;

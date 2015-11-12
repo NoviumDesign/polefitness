@@ -11,7 +11,7 @@ footer.site-footer
 
   .footer-content
     +container(990px)
-    padding: $base-padding
+    padding: 20px
 
     .footer-logo img
       display: block
@@ -22,6 +22,7 @@ footer.site-footer
   
   > li
     +span(full)
+    margin-bottom: 20px
 
     +breakpoint($medium-screen-up)
       +span(4 of 12)
@@ -38,12 +39,14 @@ footer.site-footer
       &:last-child
         +span(2 of 12 last)
 
-    > a
-      font-weight: 700
-
     a 
       color: #fff
 
       &:hover,
       &:focus
         color: darken(#fff, 20%)
+
+    > a
+      @extend .condensed
+      font-size: em(18px)
+      color: darken(#fff, 20%)
