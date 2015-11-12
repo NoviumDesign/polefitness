@@ -122,6 +122,17 @@ function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
     return $html;
 }
 
+// Disable all woocommerce auto-css. We rely on our own coding skills. #coolness
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+/**
+ * Tell WooCommerce that we know what we are doing and our theme is configurated to use WooCommerce.
+ */
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
 /**
  * Enqueue scripts and styles.
  */
@@ -138,27 +149,11 @@ function polefitness_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'polefitness_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
 require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
 require get_template_directory() . '/inc/functions/extras.php';
-
-/**
- * Customizer additions.
- */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
 require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/woocommerce/hooks.php';
+require get_template_directory() . '/inc/woocommerce/template-tags.php';
+require get_template_directory() . '/inc/woocommerce/functions.php';

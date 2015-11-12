@@ -1,1 +1,4 @@
-.sass-cache
+/.sass-cache
+**/storefront/
+*.sassc
+wp-content/themes/polefitness/style.css.map
