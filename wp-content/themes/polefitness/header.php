@@ -33,6 +33,13 @@
 				<?php endif; // End header image check. ?>
 			</div><!-- .site-branding -->
 
+			<?php
+			/**
+			 * @hooked polefitness_header_cart - 60
+			 */
+			do_action( 'polefitness_header' ); ?>
+
+
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'polefitness' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
