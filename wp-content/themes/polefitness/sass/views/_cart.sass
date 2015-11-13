@@ -1,0 +1,52 @@
+.woocommerce-cart
+  .shop_table
+    table-layout: auto
+  .product-remove
+    text-align: center
+  th.product-thumbnail
+    width: 85px
+  .product-price,
+  .product-quantity,
+  .product-name,
+  .product-remove
+    padding-right: 10px
+
+  .cart-update
+    +clearfix
+    input
+      float: right
+
+  .actions
+    +breakpoint($medium-screen-up)
+      +span(6 of 12)
+    .coupon
+      .input-text
+        width: auto
+        display: inline-block
+
+  .cart-collaterals
+    +breakpoint($medium-screen-up)
+      +span(last 6 of 12)
+    padding: em(10px)
+    background-color: #f5f5f5
+
+  .product-quantity
+    .quantity
+      display: inline-block
+      input
+        width: 50px
+
+  .cart-update
+    margin-bottom: 0.75em
+
+  .checkout-button
+    display: block
+    text-align: center
+
+
+// Visibility
+.product-thumbnail
+  display: none
++breakpoint($medium-screen-up)
+  .product-thumbnail
+    display: table-cell

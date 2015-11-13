@@ -87,4 +87,14 @@ select {
   margin-bottom: $base-spacing;
   max-width: 100%;
   width: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 5px 10px 4px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  background: #fff url('images/select-arrow.svg') no-repeat 100% 45%;
+  background-size: 30px 60px;
+  padding-right: 25px;
 }

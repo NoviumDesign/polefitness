@@ -133,6 +133,25 @@ function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
+
+// Custom posttype
+add_action( 'init', 'create_posttype' );
+function create_posttype() {
+  register_post_type( 'courses',
+    array(
+      'labels' => array(
+        'name' => __( 'Kurser' ),
+        'singular_name' => __( 'Kurs' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'rewrite' => array('slug' => 'kurs'),
+      'supports' => array( 'title' ),
+      'hierarchical' => false
+    )
+  );
+}
+
 /**
  * Enqueue scripts and styles.
  */

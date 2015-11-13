@@ -17,6 +17,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php do_action( 'woocommerce_before_mini_cart' ); ?>
 
+<?php if ( ! WC()->cart->is_empty() ) : ?>
+	<div class="top">
+		<span class="count"><?php echo wp_kses_data( sprintf( _n( '%d vara', '%d varor', WC()->cart->get_cart_contents_count(), 'polefitness' ), WC()->cart->get_cart_contents_count() ) );?></span>
+		<span class="total"><div class="subtotal"><?php _e( 'Subtotal', 'woocommerce' ); ?>:</div> <?php echo WC()->cart->get_cart_subtotal(); ?></span>
+
+		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
+
+		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="button checkout wc-forward"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
+	</div>
+<?php endif; ?>
+
 <ul class="cart_list product_list_widget <?php echo $args['list_class']; ?>">
 
 	<?php if ( ! WC()->cart->is_empty() ) : ?>
@@ -45,13 +56,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php if ( ! $_product->is_visible() ) : ?>
 							<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . $product_name . '&nbsp;'; ?>
 						<?php else : ?>
-							<a href="<?php echo esc_url( $_product->get_permalink( $cart_item ) ); ?>">
-								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . $product_name . '&nbsp;'; ?>
+							<a href="<?php echo esc_url( $_product->get_permalink( $cart_item ) ); ?>" class="product-image">
+								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
 							</a>
 						<?php endif; ?>
-						<?php echo WC()->cart->get_item_data( $cart_item ); ?>
+						<div class="details">
+							<?php echo "$product_name";?>
+							<?php echo WC()->cart->get_item_data( $cart_item ); ?>
 
-						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+							<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+						</div>
 					</li>
 					<?php
 				}
@@ -67,16 +81,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 </ul><!-- end product list -->
 
 <?php if ( ! WC()->cart->is_empty() ) : ?>
-
-	<p class="total"><strong><?php _e( 'Subtotal', 'woocommerce' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
-
-	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-
-	<p class="buttons">
-		<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="button wc-forward"><?php _e( 'Visa varukorg', 'woocommerce' ); ?></a>
-		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="button checkout wc-forward"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
-	</p>
-
+	<footer>
+		<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="wc-forward"><?php _e( 'Visa varukorg', 'woocommerce' ); ?></a>
+	</footer>
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_mini_cart' ); ?>

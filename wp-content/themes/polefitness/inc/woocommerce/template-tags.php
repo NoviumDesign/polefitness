@@ -16,7 +16,7 @@ if ( ! function_exists( 'polefitness_cart_link' ) ) {
   function polefitness_cart_link() {
     ?>
       <a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'Visa varukorgen', 'polefitness' ); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/cart.svg" height="16" width="16"><span class="count"><?php echo wp_kses_data( sprintf( _n( '%d vara', '%d varor', WC()->cart->get_cart_contents_count(), 'polefitness' ), WC()->cart->get_cart_contents_count() ) );?></span><span class="amount">(<?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?>)</span>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/cart.svg" height="16" width="16"><span class="count"><?php echo wp_kses_data( sprintf( _n( '%d vara', '%d varor', WC()->cart->get_cart_contents_count(), 'polefitness' ), WC()->cart->get_cart_contents_count() ) );?></span>&nbsp;<span class="amount">(<?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?>)</span>
       </a>
     <?php
   }
