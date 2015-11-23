@@ -22,6 +22,7 @@ Text Domain: polefitness
 @import "views/subpage";
 @import "views/blogfeed";
 @import "views/blogpost";
+@import "views/faq";
 @import "views/cart";
 
 @import "components/desktop-navigation";
@@ -37,3 +38,4 @@ Text Domain: polefitness
 @import "components/minicart/minicart";
 @import "components/minicart/cart-list";
 @import "components/woocommerce-tabs";
+@import "components/accordion";

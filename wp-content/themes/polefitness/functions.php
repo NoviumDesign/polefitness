@@ -161,6 +161,18 @@ function create_posttype() {
       'hierarchical' => false
     )
   );
+  register_post_type( 'faq',
+    array(
+      'labels' => array(
+        'name' => __( 'Vanliga frågor' ),
+        'singular_name' => __( 'Vanlig fråga' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'rewrite' => array('slug' => 'faq'),
+      'hierarchical' => false
+    )
+  );
 }
 
 /**
