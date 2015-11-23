@@ -13,11 +13,15 @@
   position: relative
   margin-right: em(18px)
 
+  &:last-child
+    margin-right: 0
+
 .main-navigation a
   @extend .condensed
   display: block
   text-decoration: none
   color: #FFFFFF
+  font-size: em(18px)
 
 +breakpoint($medium-screen-up)
   .main-navigation ul ul

@@ -41,5 +41,7 @@
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript" src="//polefitness.dev/wp-content/themes/polefitness/js/app.js"></script>
+
 </body>
 </html>

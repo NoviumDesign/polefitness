@@ -1,0 +1,31 @@
+.accordion
+
+  > li
+    border-top: 1px solid $blue
+
+    > a
+      font-weight: normal
+      font-size: $h3-font-size
+      display: block
+      padding: 8px
+
+      &:active,
+      &:focus
+        color: $action-color
+
+      &:before
+        content: "+"
+
+  .accordion-content
+    display: none
+    padding: 0px 8px 8px 22px
+
+    p
+      margin: 0
+
+  .is-expanded
+    display: block
+    background-color: $light-blue
+
+    > a:before
+      content: "-"
