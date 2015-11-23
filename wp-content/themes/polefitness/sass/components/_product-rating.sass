@@ -1,0 +1,137 @@
+.woocommerce .star-rating
+  float: right
+  overflow: hidden
+  position: relative
+  height: 1em
+  line-height: 1
+  font-size: 1em
+  width: 5.4em
+  font-family: star
+
+.woocommerce .star-rating:before
+  content: "\73\73\73\73\73"
+  color: #d3ced2
+  float: left
+  top: 0
+  left: 0
+  position: absolute
+
+.woocommerce .star-rating span
+  overflow: hidden
+  float: left
+  top: 0
+  left: 0
+  position: absolute
+  padding-top: 1.5em
+
+.woocommerce .star-rating span:before
+  content: "\53\53\53\53\53"
+  top: 0
+  position: absolute
+  left: 0
+
+.woocommerce .woocommerce-product-rating
+  line-height: 2
+  display: block
+
+.woocommerce .woocommerce-product-rating:after,
+.woocommerce .woocommerce-product-rating:before
+  content: " "
+  display: table
+
+.woocommerce .woocommerce-product-rating .star-rating
+  margin: .5em 4px 0 0
+  float: left
+
+.woocommerce .products .star-rating
+  display: block
+  margin: 0 0 .5em
+  float: none
+
+.woocommerce .hreview-aggregate .star-rating
+  margin: 10px 0 0
+
+.woocommerce p.stars
+  position: relative
+  font-size: 1em
+
+.woocommerce p.stars a
+  display: inline-block
+  font-weight: 700
+  margin-right: 1em
+  text-indent: -9999px
+  position: relative
+  border-bottom: 0!important
+  outline: 0
+
+.woocommerce p.stars a:last-child
+  border-right: 0
+
+.woocommerce p.stars a.star-1,
+.woocommerce p.stars a.star-2,
+.woocommerce p.stars a.star-3,
+.woocommerce p.stars a.star-4,
+.woocommerce p.stars a.star-5
+  border-right: 1px solid #ccc
+
+.woocommerce p.stars a.star-1:after,
+.woocommerce p.stars a.star-2:after,
+.woocommerce p.stars a.star-3:after,
+.woocommerce p.stars a.star-4:after,
+.woocommerce p.stars a.star-5:after
+  font-family: WooCommerce
+  text-indent: 0
+  position: absolute
+  top: 0
+  left: 0
+
+.woocommerce p.stars a.star-1
+  width: 2em
+
+.woocommerce p.stars a.star-1:after
+  content: "\e021"
+
+.woocommerce p.stars a.star-1.active:after,
+.woocommerce p.stars a.star-1:hover:after
+  content: ""
+
+.woocommerce p.stars a.star-2
+  width: 3em
+
+.woocommerce p.stars a.star-2:after
+  content: "\e021\e021"
+
+.woocommerce p.stars a.star-2.active:after,
+.woocommerce p.stars a.star-2:hover:after
+  content: ""
+
+.woocommerce p.stars a.star-3
+  width: 4em
+
+.woocommerce p.stars a.star-3:after
+  content: "\e021\e021\e021"
+
+.woocommerce p.stars a.star-3.active:after,
+.woocommerce p.stars a.star-3:hover:after
+  content: ""
+
+.woocommerce p.stars a.star-4
+  width: 5em
+
+.woocommerce p.stars a.star-4:after
+  content: "\e021\e021\e021\e021"
+
+.woocommerce p.stars a.star-4.active:after,
+.woocommerce p.stars a.star-4:hover:after
+  content: ""
+
+.woocommerce p.stars a.star-5
+  width: 6em
+  border: 0
+
+.woocommerce p.stars a.star-5:after
+  content: "\e021\e021\e021\e021\e021"
+
+.woocommerce p.stars a.star-5.active:after,
+.woocommerce p.stars a.star-5:hover:after
+  content: ""

@@ -32,5 +32,8 @@ Text Domain: polefitness
 @import "components/products";
 @import "components/product-archive";
 @import "components/product-single";
-@import "components/minicart";
+@import "components/product-rating";
+@import "components/pagination";
+@import "components/minicart/minicart";
+@import "components/minicart/cart-list";
 @import "components/woocommerce-tabs";

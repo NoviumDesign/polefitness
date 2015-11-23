@@ -18,6 +18,14 @@
  * @package WordPress
  */
 
+// Fix local dev over lan
+$s = empty($_SERVER['HTTPS']) ? '' : ($_SERVER['HTTPS'] == 'on') ? 's' : '';
+$port = ($_SERVER['SERVER_PORT'] == '80') ? '' : (":".$_SERVER['SERVER_PORT']);
+$url = "http$s://" . $_SERVER['HTTP_HOST'] . $port;
+define('WP_HOME', $url);
+define('WP_SITEURL', $url);
+unset($s, $port, $url);
+
 // ** MySQL-inställningar - MySQL-uppgifter får du från ditt webbhotell ** //
 /** Namnet på databasen du vill använda för WordPress */
 define('DB_NAME', 'polefitness');

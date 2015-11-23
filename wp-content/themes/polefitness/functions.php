@@ -107,6 +107,17 @@ function polefitness_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Checkout', 'polefitness' ),
+		'id'            => 'checkout-sidebar',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
 }
 add_action( 'widgets_init', 'polefitness_widgets_init' );
 
@@ -158,9 +169,9 @@ function create_posttype() {
 function polefitness_scripts() {
 	wp_enqueue_style( 'polefitness-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'polefitness-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'jquery-2', get_template_directory_uri() . '/js/vendor/jquery-2.1.4.min.js', array(), '2.1.4', true );
+	wp_enqueue_script( 'polefitness-app', get_template_directory_uri() . '/js/app.js', array(), '0001', true );
 
-	wp_enqueue_script( 'polefitness-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

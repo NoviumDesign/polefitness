@@ -18,20 +18,38 @@ get_header(); ?>
     ?>
 
   <?php endwhile; // End of the loop. ?>
-  <aside>
-    <h2>I varukorgen</h2>
-    <?php
-        global $woocommerce;
-        $items = $woocommerce->cart->get_cart();
 
-            foreach($items as $item => $values) { 
-                $_product = $values['data']->post; 
-                echo "<b>".$_product->post_title.'</b>  <br> Quantity: '.$values['quantity'].'<br>'; 
-                $price = get_post_meta($values['product_id'] , '_price', true);
-                echo "  Price: ".$price."<br>";
-            }
-    ?>
-  </aside>
+  <div id="secondary" class="widget-area">
+
+    <aside>
+      <h2>Din varukorg</h2>
+      <?php
+          global $woocommerce;
+          $items = $woocommerce->cart->get_cart();
+            echo "<ul>";
+              foreach($items as $item => $values) { 
+                  $_product = $values['data']->post;
+                  //product image
+                  $getProductDetail = wc_get_product( $values['product_id'] );
+                  echo '<li class="mini_cart_item">';
+                    echo $getProductDetail->get_image(); // accepts 2 arguments ( size, attr )
+
+                    echo "<strong>".$_product->post_title.'</strong> '.'<br>';
+                    echo $values['variation']["attribute_storlek"] . "<br>";
+                    $price = get_post_meta($values['product_id'] , '_price', true);
+                    echo $values['quantity'] . " × " . $price. "kr" ."<br>";
+
+              }
+            echo "</ul>";
+      ?>
+    </aside>
+
+    <?php dynamic_sidebar( 'checkout-sidebar' ); ?>
+
+  </div>
+
 </div>
 <pre width="100%"><?php var_dump($items) ?></pre>
+<h2>Dump av $getProductDetail</h2>
+<pre width="100%"><?php var_dump($getProductDetail)?></pre>
 <?php get_footer(); ?>
