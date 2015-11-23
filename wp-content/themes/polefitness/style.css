@@ -883,6 +883,32 @@ body {
     float: left;
     margin-right: 3.0837%; } }
 
+.employees-grid {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+  .employees-grid .employee {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    @media (min-width: 37.5em) {
+      .employees-grid .employee {
+        width: 48.45815%;
+        float: left;
+        margin-right: 3.0837%; } }
+    @media (min-width: 56.25em) {
+      .employees-grid .employee {
+        width: 31.27753%;
+        float: left;
+        margin-right: 3.0837%; } }
+    .employees-grid .employee img {
+      display: block;
+      padding-bottom: 0.75em;
+      margin-bottom: 0.5em;
+      border-bottom: 1px solid #ddd; }
+
 .woocommerce-cart .shop_table {
   table-layout: auto; }
 .woocommerce-cart .product-remove {

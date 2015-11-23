@@ -220,6 +220,23 @@ function create_posttype() {
       'hierarchical' => false
     )
   );
+  register_post_type( 'employees',
+    array(
+      'labels' => array(
+        'name' => __( 'Medarbetare' ),
+        'singular_name' => __( 'Medarbetare' )
+      ),
+      'supports' => array(
+        'title',
+        'editor',
+        'thumbnail'
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'rewrite' => array('slug' => 'medarbetare'),
+      'hierarchical' => false
+    )
+  );
 }
 
 /**

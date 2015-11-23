@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: FAQ
+ * Template Name: Medarbetare
  *
  * @package polefitness
  */
@@ -22,31 +22,26 @@ get_header(); ?>
   <?php endwhile; // End of the loop. ?>
 
 
-  <ul class="accordion faq">
+  <div class="employees-grid">
     <?php
-      $args = array( 'post_type' => 'faq', 'posts_per_page' => 25, 'orderby' => 'menu_order' );
+      $args = array( 'post_type' => 'employees', 'posts_per_page' => 25, 'orderby' => 'menu_order' );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post();
     ?>
-      
-      <li>
 
-        <a href="javascript:void(0)" class="js-accordion-trigger">
-          <?php the_title(); ?>
-        </a>
+    <div class="employee">
 
-        <div class="accordion-content">
-          <?php the_content(); ?>
-        </div>
+      <?php the_post_thumbnail(); ?> 
 
-      </li>
+      <h3><?php the_title(); ?></h3>
 
+      <?php the_content(); ?>
+
+    </div>
 
     <?php endwhile; ?>
 
-  </ul>
-
-  <?php get_sidebar(); ?>
+  </div>
 
 </div>
 
