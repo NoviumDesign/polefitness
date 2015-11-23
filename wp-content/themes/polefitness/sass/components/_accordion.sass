@@ -4,16 +4,20 @@
     border-top: 1px solid $blue
 
     > a
+      position: relative
       font-weight: normal
       font-size: $h3-font-size
       display: block
-      padding: 8px
+      padding: 8px 8px 8px 22px
+      +clearfix
 
       &:active,
       &:focus
         color: $action-color
 
       &:before
+        position: absolute
+        left: 8px
         content: "+"
 
   .accordion-content
@@ -29,3 +33,13 @@
 
     > a:before
       content: "-"
+
+  .time,
+  .link,
+  .instructor
+    float: left
+    width: 33%
+
+  .item a
+    +clearfix
+    display: block

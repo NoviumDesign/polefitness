@@ -80,7 +80,7 @@ get_header(); ?>
             <div class="link">Kurs</div>
             <div class="instructor">Instruktör</div>
           </a>
-          <ul class="submenu">
+          <ul class="accordion-content">
             <?php while ( $monday_items->have_posts() ) : $monday_items->the_post(); ?>
               <li class="item">
                 <a href="<?php the_permalink( $post->ID ); ?>">
@@ -99,7 +99,7 @@ get_header(); ?>
             <div class="link">Kurs</div>
             <div class="instructor">Instruktör</div>
           </a>
-          <ul class="submenu">
+          <ul class="accordion-content">
             <?php while ( $tuesday_items->have_posts() ) : $tuesday_items->the_post(); ?>
               <li class="item">
                 <a href="<?php the_permalink( $post->ID ); ?>">
