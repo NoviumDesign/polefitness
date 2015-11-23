@@ -369,6 +369,9 @@ h1 {
 h2 {
   font-size: 1.5625em; }
 
+h3 {
+  font-size: 1.3125em; }
+
 p {
   margin: 0 0 0.75em; }
 
@@ -402,39 +405,6 @@ img,
 picture {
   margin: 0;
   max-width: 100%; }
-
-.accordion {
-  background-color: #DDE8F7;
-  margin: 0 0 1.5em 0;
-  padding: 0; }
-  .accordion > li > a {
-    font-weight: normal;
-    color: #333;
-    display: block;
-    padding: 0.75em 1.618em;
-    text-decoration: none;
-    border-bottom: 1px solid #BED6F7; }
-    .accordion > li > a::after {
-      clear: both;
-      content: "";
-      display: table; }
-  .accordion ul.submenu {
-    display: none; }
-  .accordion .is-expanded > a {
-    background-color: #BED6F7;
-    display: block; }
-  .accordion .time,
-  .accordion .link,
-  .accordion .instructor {
-    float: left;
-    width: 33%; }
-  .accordion .item a {
-    display: block;
-    padding: 0.75em 1.618em; }
-    .accordion .item a::after {
-      clear: both;
-      content: "";
-      display: table; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -658,6 +628,46 @@ object {
 .gallery-caption {
   display: block; }
 
+.accordion > li {
+  border-top: 1px solid #489BFF; }
+  .accordion > li > a {
+    position: relative;
+    font-weight: normal;
+    font-size: 1.3125em;
+    display: block;
+    padding: 8px 8px 8px 22px; }
+    .accordion > li > a::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .accordion > li > a:active, .accordion > li > a:focus {
+      color: #489BFF; }
+    .accordion > li > a:before {
+      position: absolute;
+      left: 8px;
+      content: "+"; }
+.accordion .accordion-content {
+  display: none;
+  padding: 0px 8px 8px 22px; }
+  .accordion .accordion-content p {
+    margin: 0; }
+.accordion .is-expanded {
+  display: block;
+  background-color: #DDE8F7; }
+  .accordion .is-expanded > a:before {
+    content: "-"; }
+.accordion .time,
+.accordion .link,
+.accordion .instructor {
+  float: left;
+  width: 33%; }
+.accordion .item a {
+  display: block; }
+  .accordion .item a::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 * {
   box-sizing: border-box; }
 
@@ -776,8 +786,11 @@ body {
       width: 65.63877%;
       float: left;
       margin-right: 3.0837%; } }
-.home .front-page-content .entry-content {
-  margin: 0; }
+.home .front-page-content {
+  border-top: 1px dashed #323232;
+  padding-top: 14px; }
+  .home .front-page-content .entry-content {
+    margin: 0; }
 
 #subpage::after {
   clear: both;
@@ -856,6 +869,20 @@ body {
       float: left;
       margin-right: 3.0837%; } }
 
+@media (max-width: 37.5em) {
+  .faq {
+    margin-bottom: 0.75em; } }
+@media (min-width: 37.5em) {
+  .faq {
+    width: 57.04846%;
+    float: left;
+    margin-right: 3.0837%; } }
+@media (min-width: 56.25em) {
+  .faq {
+    width: 65.63877%;
+    float: left;
+    margin-right: 3.0837%; } }
+
 .woocommerce-cart .shop_table {
   table-layout: auto; }
 .woocommerce-cart .product-remove {
@@ -921,11 +948,14 @@ body {
   margin-right: 1.125em; }
   .main-navigation li:last-child {
     margin-right: 0; }
+  .main-navigation li:last-child {
+    margin-right: 0; }
 
 .main-navigation a {
   display: block;
   text-decoration: none;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  font-size: 1.125em; }
 
 @media (min-width: 37.5em) {
   .main-navigation ul ul {
@@ -1085,6 +1115,8 @@ body {
       width: 31.27753%;
       float: right;
       margin-right: 0; } }
+  .widget-area aside.widget {
+    margin: 0; }
 
 footer.site-footer {
   margin-top: 40px; }
@@ -1420,6 +1452,9 @@ footer.site-footer {
 
 .site-header-cart {
   float: right; }
+  @media (min-width: 37.5em) {
+    .site-header-cart img {
+      display: none; } }
 
 .widget_shopping_cart {
   display: none;
@@ -1514,5 +1549,14 @@ a.cart-contents:hover {
     .woocommerce-tabs .shop_attributes td {
       border-bottom: 0;
       vertical-align: top; }
+
+.widget-recent-posts h2 {
+  font-family: "HelveticaNeue-CondensedBold"; }
+  .widget-recent-posts h2 a {
+    color: #323232; }
+    .widget-recent-posts h2 a:hover {
+      color: #656565; }
+.widget-recent-posts li:last-child p {
+  margin: 0; }
 
 /*# sourceMappingURL=style.css.map */

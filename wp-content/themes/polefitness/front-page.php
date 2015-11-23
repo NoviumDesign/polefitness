@@ -30,6 +30,7 @@ get_header(); ?>
   <div class="box">
 
     <a href="<?php the_field('box_1_link'); ?>"><img src="<?php the_field('box_1_img'); ?>"></a>
+    <h2><?php the_field('box_1_title'); ?></h2>
     <?php the_field('box_1_text'); ?>
     <a href="<?php the_field('box_1_link'); ?>">Läs mer</a>
 
@@ -37,6 +38,7 @@ get_header(); ?>
   <div class="box">
 
     <a href="<?php the_field('box_1_link'); ?>"><img src="<?php the_field('box_2_img'); ?>"></a>
+    <h2><?php the_field('box_2_title'); ?></h2>
     <?php the_field('box_2_text'); ?>
     <a href="<?php the_field('box_2_link'); ?>">Läs mer</a>
 
@@ -44,6 +46,7 @@ get_header(); ?>
   <div class="box">
 
     <a href="<?php the_field('box_1_link'); ?>"><img src="<?php the_field('box_3_img'); ?>"></a>
+    <h2><?php the_field('box_3_title'); ?></h2>
     <?php the_field('box_3_text'); ?>
     <a href="<?php the_field('box_3_link'); ?>">Läs mer</a>
 
