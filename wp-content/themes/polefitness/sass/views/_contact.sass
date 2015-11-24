@@ -1,0 +1,37 @@
+.contact-information
+  +breakpoint($small-screen-only)
+    margin-bottom: 20px
+
+  +breakpoint($medium-screen-up)
+    +span(7 of 12)
+
+  +breakpoint($large-screen-up)
+    +span(8 of 12)
+
+  .adress, .email, .phone
+    position: relative
+    padding-left: em(40px)
+    margin-bottom: em(12px)
+    font-size: $large-font-size
+
+    &:before
+      content: " "
+      position: absolute
+      left: 0
+      width: 1.5em
+      height: 1.5em
+      background-size: 1.5em 1.5em
+      background-repeat: no-repeat
+
+  .adress
+    padding-bottom: em(12px)
+    border-bottom: 1px solid $light-gray
+
+    &:before
+      background-image: url('images/location.svg')
+
+  .email:before
+    background-image: url('images/email.svg')
+
+  .phone:before
+    background-image: url('images/phone.svg')

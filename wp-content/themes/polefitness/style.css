@@ -1186,6 +1186,42 @@ body {
       margin-bottom: 0.5em;
       border-bottom: 1px solid #ddd; }
 
+@media (max-width: 37.5em) {
+  .contact-information {
+    margin-bottom: 20px; } }
+@media (min-width: 37.5em) {
+  .contact-information {
+    width: 57.04846%;
+    float: left;
+    margin-right: 3.0837%; } }
+@media (min-width: 56.25em) {
+  .contact-information {
+    width: 65.63877%;
+    float: left;
+    margin-right: 3.0837%; } }
+.contact-information .adress, .contact-information .email, .contact-information .phone {
+  position: relative;
+  padding-left: 2.5em;
+  margin-bottom: 0.75em;
+  font-size: 1.125em; }
+  .contact-information .adress:before, .contact-information .email:before, .contact-information .phone:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat; }
+.contact-information .adress {
+  padding-bottom: 0.75em;
+  border-bottom: 1px solid #ddd; }
+  .contact-information .adress:before {
+    background-image: url("images/location.svg"); }
+.contact-information .email:before {
+  background-image: url("images/email.svg"); }
+.contact-information .phone:before {
+  background-image: url("images/phone.svg"); }
+
 .woocommerce-cart .shop_table {
   table-layout: auto; }
 .woocommerce-cart .product-remove {
