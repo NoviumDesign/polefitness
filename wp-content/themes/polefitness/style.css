@@ -865,17 +865,18 @@ object {
     content: "-"; }
 .accordion .time,
 .accordion .link,
-.accordion .instructor {
+.accordion .instructor,
+.accordion .register {
   float: left;
-  width: 33%; }
-.accordion .item a {
+  width: 25%; }
+.accordion .item {
   display: block;
   color: #323232; }
-  .accordion .item a::after {
+  .accordion .item::after {
     clear: both;
     content: "";
     display: table; }
-  .accordion .item a:hover {
+  .accordion .item:hover {
     color: #7f7f7f; }
 
 .owl-carousel {
@@ -1152,13 +1153,33 @@ body {
     @media (min-width: 37.5em) {
       .employees-grid .employee {
         width: 48.45815%;
-        float: left;
-        margin-right: 3.0837%; } }
+        float: left; }
+        .employees-grid .employee:nth-child(2n + 1) {
+          margin-left: 0;
+          margin-right: -100%;
+          clear: both;
+          margin-left: 0; }
+        .employees-grid .employee:nth-child(2n + 2) {
+          margin-left: 51.54185%;
+          margin-right: -100%;
+          clear: none; } }
     @media (min-width: 56.25em) {
       .employees-grid .employee {
         width: 31.27753%;
-        float: left;
-        margin-right: 3.0837%; } }
+        float: left; }
+        .employees-grid .employee:nth-child(3n + 1) {
+          margin-left: 0;
+          margin-right: -100%;
+          clear: both;
+          margin-left: 0; }
+        .employees-grid .employee:nth-child(3n + 2) {
+          margin-left: 34.36123%;
+          margin-right: -100%;
+          clear: none; }
+        .employees-grid .employee:nth-child(3n + 3) {
+          margin-left: 68.72247%;
+          margin-right: -100%;
+          clear: none; } }
     .employees-grid .employee img {
       display: block;
       padding-bottom: 0.75em;
@@ -1796,7 +1817,10 @@ a.cart-contents:hover {
   content: "";
   display: table; }
 .mini_cart_item .product-image {
-  float: left; }
+  float: left;
+  display: block; }
+  .mini_cart_item .product-image img {
+    display: block; }
 .mini_cart_item .remove {
   float: right; }
 

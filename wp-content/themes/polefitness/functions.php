@@ -223,17 +223,18 @@ function create_posttype() {
   register_post_type( 'employees',
     array(
       'labels' => array(
-        'name' => __( 'Medarbetare' ),
-        'singular_name' => __( 'Medarbetare' )
+        'name' => __( 'Instruktörer' ),
+        'singular_name' => __( 'Intruktör' )
       ),
       'supports' => array(
         'title',
         'editor',
-        'thumbnail'
+        'thumbnail',
+        'page-attributes'
       ),
       'public' => true,
       'has_archive' => false,
-      'rewrite' => array('slug' => 'medarbetare'),
+      'rewrite' => array('slug' => 'instruktorer'),
       'hierarchical' => false
     )
   );
@@ -253,6 +254,12 @@ function create_posttype() {
       'hierarchical' => false
     )
   );
+}
+
+add_action( 'after_setup_theme', 'vida_theme_setup' );
+function vida_theme_setup() {
+    add_image_size ( 'employees', 300, 444, true );
+    add_image_size ( 'blog_overview', 465, 237, true );
 }
 
 /**

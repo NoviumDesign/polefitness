@@ -31,7 +31,7 @@ get_header(); ?>
 
     <div class="employee">
 
-      <?php the_post_thumbnail(); ?> 
+      <?php the_post_thumbnail( 'employees' ); ?>
 
       <h3><?php the_title(); ?></h3>
 
