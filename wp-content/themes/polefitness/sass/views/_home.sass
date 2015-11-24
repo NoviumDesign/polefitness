@@ -2,7 +2,10 @@
 
   .promo
     +clearfix
-    margin-bottom: gutter()
+    margin-bottom: 20px
+    
+    +breakpoint($medium-screen-up)
+      margin-bottom: gutter()
 
     .right
       +span(full)
@@ -24,6 +27,9 @@
 
     img
       display: block
+
+      +breakpoint($small-screen-only)
+        margin-bottom: em(6px)
 
   .boxes
     +clearfix
