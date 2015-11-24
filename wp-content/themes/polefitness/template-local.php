@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Medarbetare
+ * Template Name: Lokal
  *
  * @package polefitness
  */
@@ -22,26 +22,19 @@ get_header(); ?>
   <?php endwhile; // End of the loop. ?>
 
 
-  <div class="employees-grid"><!-- employee-grid -->
+  <div class="local-carousel"><!-- local-carousel -->
+
     <?php
-      $args = array( 'post_type' => 'employees', 'posts_per_page' => 25, 'orderby' => 'menu_order' );
+      $args = array( 'post_type' => 'local-media', 'posts_per_page' => 25, 'orderby' => 'menu_order' );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post();
     ?>
 
-    <div class="employee">
-
-      <?php the_post_thumbnail(); ?> 
-
-      <h3><?php the_title(); ?></h3>
-
-      <?php the_content(); ?>
-
-    </div>
+      <div> <?php the_post_thumbnail(); ?>  </div>
 
     <?php endwhile; ?>
 
-  </div><!-- employee-grid END -->
+  </div><!-- local-carousel END -->
 
 </div>
 

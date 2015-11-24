@@ -1,0 +1,49 @@
+.owl-carousel
+  +span(full)
+  position: relative
+
+  .owl-prev, .owl-next
+    position: absolute
+    top: 50%
+    margin-top: -8px
+
+    &:before
+      position: relative
+      content: ""
+      display: inline-block
+      width: 16px
+      height: 16px
+      border-right: 4px solid white
+      border-top: 4px solid white
+
+  .owl-prev
+    left: 0
+
+    &:before
+      transform: rotate(225deg)
+      margin-left: 16px
+
+  .owl-next
+    right: 0
+
+    &:before
+      transform: rotate(45deg)
+      margin-right: 16px
+
+  .owl-dots
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    text-align: center
+
+    .owl-dot
+      display: inline-block
+      height: 12px
+      width: 12px
+      border-radius: 50%
+      background-color: rgba(255,255,255,1)
+      margin: 4px
+
+      &.active
+        background-color: rgba(255,255,255,0.75)

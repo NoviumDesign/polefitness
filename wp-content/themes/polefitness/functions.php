@@ -237,6 +237,22 @@ function create_posttype() {
       'hierarchical' => false
     )
   );
+  register_post_type( 'local-media',
+    array(
+      'labels' => array(
+        'name' => __( 'Lokal' ),
+        'singular_name' => __( 'Lokal' )
+      ),
+      'supports' => array(
+        'title',
+        'thumbnail'
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'rewrite' => array('slug' => 'lokal'),
+      'hierarchical' => false
+    )
+  );
 }
 
 /**
@@ -246,6 +262,7 @@ function polefitness_scripts() {
 	wp_enqueue_style( 'polefitness-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery-2', get_template_directory_uri() . '/js/vendor/jquery-2.1.4.min.js', array(), '2.1.4', true );
+  wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array(), '2.0.0-beta.2.4', true );
 	wp_enqueue_script( 'polefitness-app', get_template_directory_uri() . '/js/app.js', array(), '0001', true );
 
 
