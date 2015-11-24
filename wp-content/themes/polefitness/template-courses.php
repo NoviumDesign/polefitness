@@ -115,6 +115,5 @@ get_header(); ?>
 
     <?php endwhile; // End of the loop. ?>
 
-  <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
