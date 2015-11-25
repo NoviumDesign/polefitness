@@ -1,6 +1,7 @@
 .minicart-wrapper
-  +clearfix
+  float: left
   position: relative
+  margin-right: em(20px)
 
 .site-header-cart,
 .site-header-cart > li
@@ -57,8 +58,14 @@ a.cart-contents,
 a.cart-contents:hover
   color: #FFFFFF
 
-.cart-contents img
-  margin-right: em(8px)
+.cart-contents
+  img
+    margin-right: em(6px)
+
+  +breakpoint($small-screen-only) 
+    .product,
+    .amount
+      display: none
 
 .mini_cart_item
   border-bottom: 1px solid #CCCCCC
