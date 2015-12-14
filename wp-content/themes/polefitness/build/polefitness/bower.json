@@ -1,0 +1,24 @@
+{
+  "name": "polefitness",
+  "authors": [
+    "Anton Kjörck Lindén <anton@noviumdesign.se>"
+  ],
+  "description": "",
+  "main": "style.css",
+  "moduleType": [],
+  "license": "Private",
+  "homepage": "http://www.polefitness.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "~2.2.6",
+    "bourbon": "~4.2.6",
+    "compass-breakpoint": "~2.6.1"
+  }
+}

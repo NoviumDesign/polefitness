@@ -27,8 +27,10 @@
     display: block
     position: absolute
     z-index: 9999
-    width: 390px
+    width: 320px
     right: 0
+    +breakpoint($medium-screen-up)
+      width: 390px
 
 .widget_shopping_cart
   .top
@@ -49,6 +51,7 @@
       display: block
       text-align: center
       clear: both
+      background-color: $checkout
 
   footer
     padding-top: 10px

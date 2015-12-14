@@ -5,12 +5,25 @@
   
 .products
   .product
-    margin-bottom: em(10px)
+    text-align: center
     img
       height: auto
+      margin-bottom: em(7px)
     a
       color: $base-font-color
       display: block
     a.button
+      margin-top: em(15px)
       text-align: center
       color: #FFFFFF
+    .no-rating
+      margin: 0 0 0.5em
+      line-height: 1
+      font-size: 1em
+    .price
+      margin-bottom: em(5px)
+    .star-rating
+      &:before,
+        color: #B9D9FF
+      span
+        color: #489BFF

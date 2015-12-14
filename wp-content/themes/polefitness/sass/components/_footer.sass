@@ -18,6 +18,28 @@ footer.site-footer
       max-height: 60px
       width: auto
 
+.menu-footer-container
+  +clearfix
+  +breakpoint($medium-screen-up)
+    +span(8 of 12)
+
+    +breakpoint($large-screen-up)
+      +span(8 of 12)
+
+.footer-widget
+  color: #FFFFFF
+  h6
+    font-family: $condensed-font-family
+    font-size: 18px
+    color: #CCCCCC
+    text-transform: uppercase
+  +breakpoint($medium-screen-up)
+    +span(4 of 12 last)
+
+    +breakpoint($large-screen-up)
+      +span(4 of 12 last)
+
+
 .footer-bottom .menu
   
   > li
@@ -25,19 +47,19 @@ footer.site-footer
     margin-bottom: 20px
 
     +breakpoint($medium-screen-up)
-      +span(4 of 12)
+      +span(2 of 8)
 
       &:nth-child(3n+3)
-        +span(4 of 12 last)
+        +span(2 of 8 last)
 
     +breakpoint($large-screen-up)
-      +span(2 of 12)
+      +span(2 of 8)
 
       &:nth-child(3n+3)
-        +span(2 of 12)
+        +span(2 of 8)
 
       &:last-child
-        +span(2 of 12 last)
+        +span(2 of 8 last)
 
     a 
       color: #fff
