@@ -12,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $base-font-family;
+  font-family: $condensed-font-family;
   line-height: $heading-line-height;
   margin: 0 0 em(4px);
   font-weight: initial;
@@ -32,9 +32,11 @@ h3 {
 
 p {
   margin: 0 0 $small-spacing;
+  font-size: $large-font-size;
 }
 
 a {
+  font-size: $large-font-size;
   color: $action-color;
   text-decoration: none;
   transition: color $base-duration $base-timing;
