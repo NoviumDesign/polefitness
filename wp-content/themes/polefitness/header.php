@@ -32,6 +32,8 @@ src="https://www.facebook.com/tr?id=858512000913811&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 <?php wp_head(); ?>
+<script src="https://use.typekit.net/zit0ndg.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body <?php body_class(); ?>>
