@@ -264,22 +264,6 @@ function create_posttype() {
       'hierarchical' => false
     )
   );
-  register_post_type( 'local-media',
-    array(
-      'labels' => array(
-        'name' => __( 'Lokal' ),
-        'singular_name' => __( 'Lokal' )
-      ),
-      'supports' => array(
-        'title',
-        'thumbnail'
-      ),
-      'public' => true,
-      'has_archive' => false,
-      'rewrite' => array('slug' => 'lokal'),
-      'hierarchical' => false
-    )
-  );
 }
 
 /**

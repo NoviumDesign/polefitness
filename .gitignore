@@ -5,3 +5,5 @@
 *.css
 wp-content/themes/polefitness/style.css.map
 wp-content/themes/polefitness/js/app.js
+build
+wp-content/themes/polefitness/style.css
