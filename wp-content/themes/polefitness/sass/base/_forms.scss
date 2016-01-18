@@ -35,7 +35,7 @@ select[multiple=multiple] {
   box-sizing: border-box;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  margin-bottom: $small-spacing;
+  margin-bottom: $base-spacing;
   padding: $base-spacing / 3;
   transition: border-color $base-duration $base-timing;
   width: 100%;
@@ -84,7 +84,7 @@ input[type="file"] {
 }
 
 select {
-  margin-bottom: $base-spacing;
+  margin-bottom: em(13px);
   max-width: 100%;
   width: auto;
   -webkit-appearance: none;

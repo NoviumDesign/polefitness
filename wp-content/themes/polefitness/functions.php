@@ -45,6 +45,7 @@ function polefitness_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'polefitness' ),
+    'footer' => esc_html__( 'Footer Menu', 'polefitness' ),
 	) );
 
 	/*
@@ -165,6 +166,16 @@ function polefitness_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
+  register_sidebar( array(
+    'name'          => esc_html__( 'Footer', 'polefitness' ),
+    'id'            => 'footer-widget',
+    'description'   => '',
+    'before_widget' => '<div class="footer-widget">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h6 class="widget-title">',
+    'after_title'   => '</h6>',
+  ) );
+
 }
 add_action( 'widgets_init', 'polefitness_widgets_init' );
 
@@ -172,7 +183,17 @@ add_action( 'widgets_init', 'polefitness_widgets_init' );
  * Adjust image sizes for this webpage
  */
 
-add_image_size ( 'front_page_promo', 716, 350);
+
+add_action( 'after_setup_theme', 'vida_theme_setup' );
+function vida_theme_setup() {
+    add_image_size ( 'employees', 300, 444, true );
+    add_image_size ( 'blog_overview', 465, 237, true );
+    add_image_size ( 'blog_single', 465, 237, true );
+    add_image_size ( 'front_page_promo', 716, 350, true);
+    add_image_size ( 'front_box', 344, 243, true);
+
+}
+
 
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
 function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
@@ -204,7 +225,7 @@ function create_posttype() {
       'public' => true,
       'has_archive' => false,
       'rewrite' => array('slug' => 'kurs'),
-      'supports' => array( 'title' ),
+      'supports' => array( 'title', 'page-attributes'),
       'hierarchical' => false
     )
   );
@@ -213,6 +234,11 @@ function create_posttype() {
       'labels' => array(
         'name' => __( 'Vanliga frågor' ),
         'singular_name' => __( 'Vanlig fråga' )
+      ),
+      'supports' => array(
+        'title',
+        'editor',
+        'page-attributes'
       ),
       'public' => true,
       'has_archive' => false,
@@ -238,28 +264,6 @@ function create_posttype() {
       'hierarchical' => false
     )
   );
-  register_post_type( 'local-media',
-    array(
-      'labels' => array(
-        'name' => __( 'Lokal' ),
-        'singular_name' => __( 'Lokal' )
-      ),
-      'supports' => array(
-        'title',
-        'thumbnail'
-      ),
-      'public' => true,
-      'has_archive' => false,
-      'rewrite' => array('slug' => 'lokal'),
-      'hierarchical' => false
-    )
-  );
-}
-
-add_action( 'after_setup_theme', 'vida_theme_setup' );
-function vida_theme_setup() {
-    add_image_size ( 'employees', 300, 444, true );
-    add_image_size ( 'blog_overview', 465, 237, true );
 }
 
 /**
