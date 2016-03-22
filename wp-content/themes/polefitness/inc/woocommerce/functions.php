@@ -19,3 +19,6 @@ if ( ! function_exists( 'polefitness_cart_link_fragment' ) ) {
     return $fragments;
   }
 }
+
+// Display 24 products per page.
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 24;' ), 20 );
