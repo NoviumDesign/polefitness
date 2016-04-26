@@ -5,48 +5,24 @@
  */
 
 get_header(); ?>
-<div id="subpage">
-  <?php while ( have_posts() ) : the_post(); ?>
 
-    <?php get_template_part( 'template-parts/content', 'page' ); ?>
+  <div id="primary" class="content-area subpage-content">
+    <main id="main" class="site-main" role="main">
 
-    <?php
-      // If comments are open or we have at least one comment, load up the comment template.
-      if ( comments_open() || get_comments_number() ) :
-        comments_template();
-      endif;
-    ?>
+      <?php while ( have_posts() ) : the_post(); ?>
 
-  <?php endwhile; // End of the loop. ?>
+        <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-  <div id="secondary" class="widget-area">
+        <?php
+          // If comments are open or we have at least one comment, load up the comment template.
+          if ( comments_open() || get_comments_number() ) :
+            comments_template();
+          endif;
+        ?>
 
-    <aside>
-      <h2>Din varukorg</h2>
-      <?php
-          global $woocommerce;
-          $items = $woocommerce->cart->get_cart();
-            echo "<ul>";
-              foreach($items as $item => $values) { 
-                  $_product = $values['data']->post;
-                  //product image
-                  $getProductDetail = wc_get_product( $values['product_id'] );
-                  echo '<li class="mini_cart_item">';
-                    echo $getProductDetail->get_image(); // accepts 2 arguments ( size, attr )
+      <?php endwhile; // End of the loop. ?>
 
-                    echo "<strong>".$_product->post_title.'</strong> '.'<br>';
-/*                    echo $values['variation']["attribute_storlek"] . "<br>";*/
-                    $price = get_post_meta($values['product_id'] , '_price', true);
-                    echo $values['quantity'] . " × " . $price. "kr" ."<br>";
+    </main><!-- #main -->
+  </div><!-- #primary -->
 
-              }
-            echo "</ul>";
-      ?>
-    </aside>
-
-    <?php dynamic_sidebar( 'checkout-sidebar' ); ?>
-
-  </div>
-
-</div>
 <?php get_footer(); ?>

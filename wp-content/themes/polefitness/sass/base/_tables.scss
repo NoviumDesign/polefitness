@@ -23,3 +23,39 @@ td,
 th {
   vertical-align: middle;
 }
+
+/*!
+// CSS only Responsive Tables
+// http://dbushell.com/2016/03/04/css-only-responsive-tables/
+// by David Bushell
+*/
+
+.rtable {
+  display: block;
+  max-width: min-content;
+  vertical-align: top;
+  max-width: 100%;
+    
+  overflow-x: auto;
+  
+  // optional - looks better for small cell values
+  white-space: nowrap;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: auto;
+}
+
+.rtable th, .rtable td {
+  padding: 6px 12px;
+}
+
+.rtable tr, td, th {
+  width: 100%;
+}
+
+.rtable,
+.rtable--flip tbody {
+  // optional - enable iOS momentum scrolling
+  -webkit-overflow-scrolling: touch;
+}

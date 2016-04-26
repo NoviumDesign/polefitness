@@ -185,14 +185,14 @@ get_header(); ?>
                 <a href="javascript:void(0)" class="js-accordion-trigger">
                   <div class="time">Måndag</div>
                   <div class="link">Kurs</div>
-                  <div class="instructor">Instruktör</div>
+                  <div class="instructor">Pris</div>
                 </a>
                 <ul class="accordion-content">
                   <?php while ( $monday_items->have_posts() ) : $monday_items->the_post(); ?>
                     <li class="item">
                         <div class="time"><?php the_field('time'); ?></div>
-                        <div class="link"><?php echo get_the_title( $post->ID ); ?></div>
-                        <div class="instructor"><?php the_field('instructor'); ?></div>
+                        <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
+                        <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register">
                         <?php
                           if( get_field('no_instructor') )
@@ -213,14 +213,14 @@ get_header(); ?>
                 <a href="javascript:void(0)" class="js-accordion-trigger">
                   <div class="time">Tisdag</div>
                   <div class="link">Kurs</div>
-                  <div class="instructor">Instruktör</div>
+                  <div class="instructor">Pris</div>
                 </a>
                 <ul class="accordion-content">
                   <?php while ( $tuesday_items->have_posts() ) : $tuesday_items->the_post(); ?>
                     <li class="item">
                         <div class="time"><?php the_field('time'); ?></div>
-                        <div class="link"><?php echo get_the_title( $post->ID ); ?></div>
-                        <div class="instructor"><?php the_field('instructor'); ?></div>
+                        <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
+                        <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register">
                         <?php
                           if( get_field('no_instructor') )
@@ -241,14 +241,14 @@ get_header(); ?>
                 <a href="javascript:void(0)" class="js-accordion-trigger">
                   <div class="time">Onsdag</div>
                   <div class="link">Kurs</div>
-                  <div class="instructor">Instruktör</div>
+                  <div class="instructor">Pris</div>
                 </a>
                 <ul class="accordion-content">
                   <?php while ( $wednesday_items->have_posts() ) : $wednesday_items->the_post(); ?>
                     <li class="item">
                         <div class="time"><?php the_field('time'); ?></div>
-                        <div class="link"><?php echo get_the_title( $post->ID ); ?></div>
-                        <div class="instructor"><?php the_field('instructor'); ?></div>
+                        <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
+                        <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register"><a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a></div>
                     </li>
                   <?php endwhile; ?>
@@ -259,14 +259,14 @@ get_header(); ?>
                 <a href="javascript:void(0)" class="js-accordion-trigger">
                   <div class="time">Torsdag</div>
                   <div class="link">Kurs</div>
-                  <div class="instructor">Instruktör</div>
+                  <div class="instructor">Pris</div>
                 </a>
                 <ul class="accordion-content">
                   <?php while ( $thursday_items->have_posts() ) : $thursday_items->the_post(); ?>
                     <li class="item">
                         <div class="time"><?php the_field('time'); ?></div>
-                        <div class="link"><?php echo get_the_title( $post->ID ); ?></div>
-                        <div class="instructor"><?php the_field('instructor'); ?></div>
+                        <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
+                        <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register">
                         <?php
                           if( get_field('no_instructor') )
@@ -287,14 +287,14 @@ get_header(); ?>
                 <a href="javascript:void(0)" class="js-accordion-trigger">
                   <div class="time">Fredag</div>
                   <div class="link">Kurs</div>
-                  <div class="instructor">Instruktör</div>
+                  <div class="instructor">Pris</div>
                 </a>
                 <ul class="accordion-content">
                   <?php while ( $friday_items->have_posts() ) : $friday_items->the_post(); ?>
                     <li class="item">
                         <div class="time"><?php the_field('time'); ?></div>
-                        <div class="link"><?php echo get_the_title( $post->ID ); ?></div>
-                        <div class="instructor"><?php the_field('instructor'); ?></div>
+                        <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
+                        <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register">
                         <?php
                           if( get_field('no_instructor') )
@@ -315,14 +315,14 @@ get_header(); ?>
                 <a href="javascript:void(0)" class="js-accordion-trigger">
                   <div class="time">Lördag</div>
                   <div class="link">Kurs</div>
-                  <div class="instructor">Instruktör</div>
+                  <div class="instructor">Pris</div>
                 </a>
                 <ul class="accordion-content">
                   <?php while ( $saturday_items->have_posts() ) : $saturday_items->the_post(); ?>
                     <li class="item">
                         <div class="time"><?php the_field('time'); ?></div>
-                        <div class="link"><?php echo get_the_title( $post->ID ); ?></div>
-                        <div class="instructor"><?php the_field('instructor'); ?></div>
+                        <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
+                        <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register">
                           <?php
                             if( get_field('no_instructor') )
@@ -343,14 +343,14 @@ get_header(); ?>
                 <a href="javascript:void(0)" class="js-accordion-trigger">
                   <div class="time">Söndag</div>
                   <div class="link">Kurs</div>
-                  <div class="instructor">Instruktör</div>
+                  <div class="instructor">Pris</div>
                 </a>
                 <ul class="accordion-content">
                   <?php while ( $sunday_items->have_posts() ) : $sunday_items->the_post(); ?>
                     <li class="item">
                         <div class="time"><?php the_field('time'); ?></div>
-                        <div class="link"><?php echo get_the_title( $post->ID ); ?></div>
-                        <div class="instructor"><?php the_field('instructor'); ?></div>
+                        <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
+                        <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register">
                           <?php
                             if( get_field('no_instructor') )

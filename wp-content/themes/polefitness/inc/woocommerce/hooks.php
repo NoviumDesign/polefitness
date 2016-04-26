@@ -19,3 +19,4 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 
 add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 11 );
 add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 12 );
+add_filter( 'woocommerce_package_rates', 'hide_collect_when_dropshipping_is_available', 10, 2 );
