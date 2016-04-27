@@ -94,7 +94,7 @@ function polefitness_content_width() {
 add_action( 'after_setup_theme', 'polefitness_content_width', 0 );
 
 /**
- * Extend Recent Posts Widget 
+ * Extend Recent Posts Widget
  *
  * Adds different formatting to the default WordPress Recent Posts Widget
  */
@@ -102,22 +102,22 @@ add_action( 'after_setup_theme', 'polefitness_content_width', 0 );
 Class Custom_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 
   function widget($args, $instance) {
-  
+
     extract( $args );
-    
+
     $title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts') : $instance['title'], $instance, $this->id_base);
-        
+
     if( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) )
       $number = 5;
-          
+
     $r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true ) ) );
     if( $r->have_posts() ) :
-      
+
       echo $before_widget;
       if( $title ) echo $before_title . $title . $after_title; ?>
 
       <ul class="widget-recent-posts">
-        <?php while( $r->have_posts() ) : $r->the_post(); ?>        
+        <?php while( $r->have_posts() ) : $r->the_post(); ?>
         <li>
           <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo get_the_post_thumbnail() ?></a>
           <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
@@ -125,12 +125,12 @@ Class Custom_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
         </li>
         <?php endwhile; ?>
       </ul>
-       
+
       <?php
       echo $after_widget;
-    
+
     wp_reset_postdata();
-    
+
     endif;
   }
 }
@@ -273,6 +273,7 @@ function polefitness_scripts() {
 	wp_enqueue_style( 'polefitness-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery-2', get_template_directory_uri() . '/js/vendor/jquery-2.1.4.min.js', array(), '2.1.4', true );
+	wp_enqueue_script( 'jquery-form-validator', '//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js', array(), '2.2.8', true );
   wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array(), '2.0.0-beta.2.4', true );
 	wp_enqueue_script( 'polefitness-app', get_template_directory_uri() . '/js/app.js', array(), '0001', true );
 

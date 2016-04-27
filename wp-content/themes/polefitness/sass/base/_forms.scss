@@ -30,13 +30,13 @@ label {
 select[multiple=multiple] {
   background-color: $base-background-color;
   border: $base-border;
-  border-radius: $base-border-radius;
+  border-radius: 0;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
   font-family: $base-font-family;
   font-size: $base-font-size;
   margin-bottom: $base-spacing;
-  padding: $base-spacing / 3;
+  padding: 0.775em;
   transition: border-color $base-duration $base-timing;
   width: 100%;
 
@@ -97,4 +97,8 @@ select {
   background: #fff url('images/select-arrow.svg') no-repeat 100% 45%;
   background-size: 30px 60px;
   padding-right: 25px;
+}
+
+.has-error .form-error {
+  color: white;
 }

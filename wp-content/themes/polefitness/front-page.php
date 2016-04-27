@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<?php 
+<?php
   $promo_img = get_field('promo_img');
   $promo_img_thumb = $promo_img['sizes'][ 'front_page_promo' ];
 
@@ -25,12 +25,11 @@ get_header(); ?>
 
 <section class="promo">
   <div class="left">
-    <?php 
-      if( !empty($promo_img) ): ?>
+    <?php if( !empty($promo_img) ): ?>
       <div class="image-column">
         <img src="<?php echo $promo_img_thumb; ?>"/>
       </div>
-    <?php endif; ?>          
+    <?php endif; ?>
   </div>
   <div class="right">
     <?php the_field('promo_text'); ?>
@@ -41,7 +40,7 @@ get_header(); ?>
   <div class="box">
 
     <a href="<?php the_field('box_1_link'); ?>">
-      <?php 
+      <?php
         if( !empty($box_1_img) ): ?>
         <div class="image-column">
           <img src="<?php echo $box_1_img_thumb; ?>"/>
@@ -56,7 +55,7 @@ get_header(); ?>
   <div class="box">
 
     <a href="<?php the_field('box_2_link'); ?>">
-      <?php 
+      <?php
         if( !empty($box_2_img) ): ?>
         <div class="image-column">
           <img src="<?php echo $box_2_img_thumb; ?>"/>
@@ -71,7 +70,7 @@ get_header(); ?>
   <div class="box">
 
     <a href="<?php the_field('box_3_link'); ?>">
-      <?php 
+      <?php
         if( !empty($box_3_img) ): ?>
         <div class="image-column">
           <img src="<?php echo $box_3_img_thumb; ?>"/>
@@ -89,7 +88,7 @@ get_header(); ?>
   <main id="main" class="site-main" role="main">
 
     <section class="front-page-content">
-    
+
       <?php while ( have_posts() ) : the_post(); ?>
 
         <?php get_template_part( 'template-parts/content', 'front-page' ); ?>
@@ -102,7 +101,7 @@ get_header(); ?>
         ?>
 
       <?php endwhile; // End of the loop. ?>
-      
+
     </section>
 
 
@@ -111,4 +110,44 @@ get_header(); ?>
 </div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+
+<!-- newsletter cta block -->
+<div class="newsletter-cta">
+  <div class="newsletter-container">
+    <div class="tagline">
+      <h3><?php the_field('newsletter_tagline'); ?></h3>
+    </div>
+    <div class="signup-form">
+      <form class="" action="" method="post">
+        <input data-validation="email" data-validation-error-msg="Ange en korrekt e-postadress" placeholder="E-post" type="email" name="email" value="">
+        <button type="submit" name="submit">Skicka</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- contact block -->
+<div class="contact" style="background-image:url('wp-content/themes/polefitness/images/map.jpg');">
+  <div class="contact-content">
+    <img src="wp-content/themes/polefitness/images/contact.svg" alt="Kontakta oss">
+    <h2><?php the_field('contact_title') ?></h2>
+    <p>
+      <?php the_field('contact_text') ?>
+    </p>
+    <div class="contact-info">
+      <?php the_field('contact_adress') ?>
+    </div>
+    <div class="contact-info">
+      <ul>
+        <li><?php the_field('contact_phone') ?></li>
+        <li><a href="mailto:<?php the_field('contact_email') ?>"><?php the_field('contact_email') ?></a></li>
+      </ul>
+      <div class="social-media">
+        <a href="<?php the_field('instagram') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/facebook.svg" alt="Facebook"></a>
+        <a href="<?php the_field('facebook') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/instagram.svg" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php get_footer(); ?>

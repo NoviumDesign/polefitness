@@ -3,7 +3,7 @@
   .promo
     +clearfix
     margin-bottom: 20px
-    
+
     +breakpoint($medium-screen-up)
       margin-bottom: gutter()
 
@@ -67,3 +67,102 @@
 
     .entry-content
       margin: 0
+
+.newsletter-cta
+  clear: both
+  margin-left: -$container-padding
+  margin-right: -$container-padding
+  padding: $container-padding*1.5
+  background-color: $blue
+
+  .newsletter-container
+    +container
+
+  .tagline
+    +span(12)
+    text-align: center
+    margin-bottom: $small-spacing
+
+    +breakpoint($large-screen-up)
+      +span(7 of 12)
+      margin-bottom: 0
+
+    h3
+      font-size: $h2-font-size
+      font-family: $base-font-family
+      font-weight: 700
+      color: white
+      margin-bottom: 0
+      margin-top: em(3px)
+      -webkit-font-smoothing: antialiased
+
+  .signup-form
+    +span(12)
+
+    +breakpoint($medium-screen-up)
+      +span(8)
+      +push(2)
+
+    +breakpoint($large-screen-up)
+      +span(5 of 12 last)
+      +push(0)
+
+    input
+      float: left
+      width: 70%
+      margin: 0
+
+    button
+      float: left
+      width: 30%
+      font-size: $large-font-size
+
+.contact
+  clear: both
+  margin-left: -$container-padding
+  margin-right: -$container-padding
+  margin-bottom: -$container-padding
+  padding: $container-padding*1.5
+  background-size: cover
+  background-repeat: no-repeat
+  +clearfix
+
+  .contact-content
+    +span(full)
+    padding: $container-padding $container-padding*2
+    background-color: white
+    text-align: center
+
+    +breakpoint($medium-screen-up)
+      +span(9 of 12)
+      +push(1.5)
+
+    +breakpoint($large-screen-up)
+      +span(7 of 12)
+      +push(2.5)
+
+    .contact-info
+      +span(full)
+      text-align: center
+      font-size: $large-font-size
+
+      +breakpoint($medium-screen-up)
+        +span(6)
+        text-align: left
+
+        &:last-child
+          +span(6 last)
+
+      .social-media
+        display: block
+        margin-top: em(3px)
+
+        a
+          display: inline-block
+          margin-right: $small-spacing/2
+
+          &:last-child
+            margin-right: 0
+
+        img
+          height: 21px
