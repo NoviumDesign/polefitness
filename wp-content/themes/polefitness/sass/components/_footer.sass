@@ -1,5 +1,7 @@
 footer.site-footer
-  margin-top: 40px
+
+  +breakpoint($medium-screen-up)
+    margin-top: 40px
 
 .footer-top
   background-color: $dark-gray
@@ -41,7 +43,7 @@ footer.site-footer
 
 
 .footer-bottom .menu
-  
+
   > li
     +span(full)
     margin-bottom: 20px
@@ -61,7 +63,7 @@ footer.site-footer
       &:last-child
         +span(2 of 8 last)
 
-    a 
+    a
       color: #fff
 
       &:hover,
