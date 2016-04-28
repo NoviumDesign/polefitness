@@ -117,12 +117,23 @@ get_header(); ?>
     <div class="tagline">
       <h3><?php the_field('newsletter_tagline'); ?></h3>
     </div>
-    <div class="signup-form">
-      <form class="" action="" method="post">
-        <input data-validation="email" data-validation-error-msg="Ange en korrekt e-postadress" placeholder="E-post" type="email" name="email" value="">
-        <button type="submit" name="submit">Skicka</button>
+    <!-- Begin MailChimp Signup Form -->
+    <div class="signup-form" id="mc_embed_signup">
+      <form action="//vidapole.us12.list-manage.com/subscribe/post?u=c52e260043b6e21c50a734d61&amp;id=d78d9271f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <div class="mc-field-group">
+          	<input data-validation="email" data-validation-error-msg="Ange en korrekt e-postadress" placeholder="E-post" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Skicka</button>
+          </div>
+        	<div id="mce-responses" class="clear">
+        		<div class="response" id="mce-error-response" style="display:none"></div>
+        		<div class="response" id="mce-success-response" style="display:none"></div>
+        	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c52e260043b6e21c50a734d61_d78d9271f2" tabindex="-1" value=""></div>
+        </div>
       </form>
     </div>
+    <!--End mc_embed_signup-->
   </div>
 </div>
 
