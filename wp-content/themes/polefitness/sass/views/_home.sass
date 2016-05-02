@@ -2,34 +2,56 @@
 
   .promo
     +clearfix
+    margin-left: -$container-padding
+    margin-top: -$container-padding
+    margin-right: -$container-padding
     margin-bottom: 20px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
 
     +breakpoint($medium-screen-up)
       margin-bottom: gutter()
 
     .right
       +span(full)
+      background-color: transparentize($blue, 0.4)
+      padding: $base-spacing*2 $base-spacing
+      color: white
 
-      h3
-        font-size: $h1-font-size
+      ul.checkmarks
+        li
+          position: relative
+          font-family: $condensed-font-family
+          font-size: $h2-font-size
+          padding-left: $base-spacing
 
-      p
-        margin: 0
+          &::before
+            position: absolute
+            top: 2px
+            left: 0
+            content: " "
+            background-image: url('images/check.svg')
+            background-size: cover
+            height: em(19px)
+            width: em(19px)
 
-      .button
-        margin-top: 0.75em
+      .button-container
+        text-align: center
+
+        .button
+          margin-top: 0.75em
+          margin-left: auto
+          margin-right: auto
+          font-size: $large-font-size
 
       +breakpoint($medium-screen-up)
         +span(5 of 12 last)
+        +push(7)
 
       +breakpoint($large-screen-up)
         +span(4 of 12 last)
-
-    img
-      display: block
-
-      +breakpoint($small-screen-only)
-        margin-bottom: em(6px)
+        +push(8)
 
   .boxes
     +clearfix
@@ -84,7 +106,7 @@
     margin-bottom: $small-spacing
 
     +breakpoint($large-screen-up)
-      +span(7 of 12)
+      +span(7.5 of 12)
       margin-bottom: 0
 
     h3
@@ -104,7 +126,7 @@
       +push(2)
 
     +breakpoint($large-screen-up)
-      +span(5 of 12 last)
+      +span(4.5 of 12 last)
       +push(0)
 
     input
@@ -116,6 +138,7 @@
       float: left
       width: 30%
       font-size: $large-font-size
+      padding: 0.7em
 
 .contact
   clear: both
@@ -160,9 +183,11 @@
         a
           display: inline-block
           margin-right: $small-spacing/2
+          overflow: visible
 
           &:last-child
             margin-right: 0
 
         img
           height: 21px
+          display: block

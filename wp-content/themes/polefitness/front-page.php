@@ -23,16 +23,20 @@ get_header(); ?>
   $box_3_img_thumb = $box_3_img['sizes'][ 'front_box' ];
 ?>
 
-<section class="promo">
-  <div class="left">
-    <?php if( !empty($promo_img) ): ?>
-      <div class="image-column">
-        <img src="<?php echo $promo_img_thumb; ?>"/>
-      </div>
-    <?php endif; ?>
-  </div>
+<section class="promo" style="background-image: url('<?php echo $promo_img_thumb; ?>');">
   <div class="right">
-    <?php the_field('promo_text'); ?>
+    <ul class="checkmarks">
+      <li><?php echo get_field('checkmark_1') ?></li>
+      <?php if( !empty( get_field('checkmark_2') ) ): ?>
+        <li><?php echo get_field('checkmark_2') ?></li>
+      <?php endif; ?>
+      <?php if( !empty( get_field('checkmark_3') ) ): ?>
+        <li><?php echo get_field('checkmark_3') ?></li>
+      <?php endif; ?>
+    </ul>
+    <div class="button-container">
+      <a class="button wide" href="<?php echo get_field('button_link') ?>"><?php echo get_field('button_text') ?></a>
+    </div>
   </div>
 </section>
 
@@ -154,8 +158,10 @@ get_header(); ?>
         <li><a href="mailto:<?php the_field('contact_email') ?>"><?php the_field('contact_email') ?></a></li>
       </ul>
       <div class="social-media">
-        <a href="<?php the_field('instagram') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/facebook.svg" alt="Facebook"></a>
-        <a href="<?php the_field('facebook') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/instagram.svg" alt="Instagram"></a>
+        <!--[if gte IE 10]><!--><a href="<?php the_field('instagram') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/facebook.svg" alt="Facebook"></a><!--<![endif]-->
+        <!--[if lt IE 10]><a href="<?php the_field('instagram') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/facebook.png" alt="Facebook"></a><![endif]-->
+        <!--[if gte IE 10]><!--><a href="<?php the_field('facebook') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/instagram.svg" alt="Instagram"></a><!--<![endif]-->
+        <!--[if lt IE 10]><a href="<?php the_field('facebook') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/instagram.png" alt="Instagram"></a><![endif]-->
       </div>
     </div>
   </div>

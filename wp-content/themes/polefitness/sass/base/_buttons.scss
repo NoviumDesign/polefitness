@@ -31,4 +31,8 @@
       background-color: $button-color;
     }
   }
+
+  &.wide {
+    padding: $small-spacing $base-spacing*2;
+  }
 }

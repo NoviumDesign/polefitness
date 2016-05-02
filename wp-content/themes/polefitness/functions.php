@@ -189,7 +189,7 @@ function vida_theme_setup() {
     add_image_size ( 'employees', 300, 444, true );
     add_image_size ( 'blog_overview', 465, 237, true );
     add_image_size ( 'blog_single', 465, 237, true );
-    add_image_size ( 'front_page_promo', 716, 350, true);
+    add_image_size ( 'front_page_promo', 1000, 350, true);
     add_image_size ( 'front_box', 344, 243, true);
 
 }
