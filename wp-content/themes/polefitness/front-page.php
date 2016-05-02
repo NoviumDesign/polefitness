@@ -158,10 +158,10 @@ get_header(); ?>
         <li><a href="mailto:<?php the_field('contact_email') ?>"><?php the_field('contact_email') ?></a></li>
       </ul>
       <div class="social-media">
-        <!--[if gte IE 10]><!--><a href="<?php the_field('instagram') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/facebook.svg" alt="Facebook"></a><!--<![endif]-->
-        <!--[if lt IE 10]><a href="<?php the_field('instagram') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/facebook.png" alt="Facebook"></a><![endif]-->
-        <!--[if gte IE 10]><!--><a href="<?php the_field('facebook') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/instagram.svg" alt="Instagram"></a><!--<![endif]-->
-        <!--[if lt IE 10]><a href="<?php the_field('facebook') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/instagram.png" alt="Instagram"></a><![endif]-->
+        <!--[if gte IE 10]><!--><a href="<?php the_field('facebook') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/facebook.svg" alt="Facebook"></a><!--<![endif]-->
+        <!--[if lt IE 10]><a href="<?php the_field('facebook') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/facebook.png" alt="Facebook"></a><![endif]-->
+        <!--[if gte IE 10]><!--><a href="<?php the_field('instagram') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/instagram.svg" alt="Instagram"></a><!--<![endif]-->
+        <!--[if lt IE 10]><a href="<?php the_field('instagram') ?>" target="_blank"><img src="wp-content/themes/polefitness/images/instagram.png" alt="Instagram"></a><![endif]-->
       </div>
     </div>
   </div>
