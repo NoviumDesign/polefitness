@@ -199,10 +199,13 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
+                          elseif( get_field('custom_sales_url') ) { ?>
+                            <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
+                          <?php }
                           else
                           { ?>
                             <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
-                          <?php } ?>
+                          <?php } ?> ?>
                         </div>
                     </li>
                   <?php endwhile; ?>
@@ -227,10 +230,13 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
+                          elseif( get_field('custom_sales_url') ) { ?>
+                            <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
+                          <?php }
                           else
                           { ?>
                             <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
-                          <?php } ?>                          
+                          <?php } ?>                        
                         </div>
                     </li>
                   <?php endwhile; ?>
@@ -249,7 +255,20 @@ get_header(); ?>
                         <div class="time"><?php the_field('time'); ?></div>
                         <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
                         <div class="instructor"><?php the_field('price'); ?>kr</div>
-                        <div class="register"><a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a></div>
+                        <div class="register">
+                        <?php
+                          if( get_field('no_instructor') )
+                          {
+                              echo "Ingen anmälan krävs";
+                          }
+                          elseif( get_field('custom_sales_url') ) { ?>
+                            <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
+                          <?php }
+                          else
+                          { ?>
+                            <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
+                          <?php } ?>                        
+                        </div>
                     </li>
                   <?php endwhile; ?>
                 </ul>
@@ -273,10 +292,13 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
+                          elseif( get_field('custom_sales_url') ) { ?>
+                            <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
+                          <?php }
                           else
                           { ?>
                             <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
-                          <?php } ?>                          
+                          <?php } ?>                         
                         </div>
                     </li>
                   <?php endwhile; ?>
@@ -301,10 +323,13 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
+                          elseif( get_field('custom_sales_url') ) { ?>
+                            <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
+                          <?php }
                           else
                           { ?>
                             <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
-                        <?php } ?>                          
+                          <?php } ?>                      
                         </div>
                     </li>
                   <?php endwhile; ?>
@@ -324,15 +349,18 @@ get_header(); ?>
                         <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
                         <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register">
-                          <?php
-                            if( get_field('no_instructor') )
-                            {
-                                echo "Ingen anmälan krävs";
-                            }
-                            else
-                            { ?>
-                              <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
-                          <?php } ?>                          
+                        <?php
+                          if( get_field('no_instructor') )
+                          {
+                              echo "Ingen anmälan krävs";
+                          }
+                          elseif( get_field('custom_sales_url') ) { ?>
+                            <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
+                          <?php }
+                          else
+                          { ?>
+                            <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
+                          <?php } ?>                       
                         </div>
                     </li>
                   <?php endwhile; ?>
@@ -352,15 +380,18 @@ get_header(); ?>
                         <div class="link"><?php echo get_the_title( $post->ID ); ?> – <?php the_field('instructor'); ?></div>
                         <div class="instructor"><?php the_field('price'); ?>kr</div>
                         <div class="register">
-                          <?php
-                            if( get_field('no_instructor') )
-                            {
-                                echo "Ingen anmälan krävs";
-                            }
-                            else
-                            { ?>
-                              <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
-                          <?php } ?>                            
+                        <?php
+                          if( get_field('no_instructor') )
+                          {
+                              echo "Ingen anmälan krävs";
+                          }
+                          elseif( get_field('custom_sales_url') ) { ?>
+                            <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
+                          <?php }
+                          else
+                          { ?>
+                            <a href="<?php the_permalink( $post->ID ); ?>">Anmälan</a>
+                          <?php } ?>                          
                         </div>
                     </li>
                   <?php endwhile; ?>
