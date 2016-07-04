@@ -199,7 +199,7 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
-                          elseif( get_field('custom_sales_url') ) { ?>
+                          elseif( get_field('custom_sales_url') == 'custom_url' ) { ?>
                             <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
                           <?php }
                           else
@@ -230,7 +230,7 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
-                          elseif( get_field('custom_sales_url') ) { ?>
+                          elseif( get_field('custom_sales_url') == 'custom_url' ) { ?>
                             <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
                           <?php }
                           else
@@ -261,7 +261,7 @@ get_header(); ?>
                             {
                                 echo "Ingen anmälan krävs";
                             }
-                            elseif( get_field('custom_sales_url') ) { ?>
+                            elseif( get_field('custom_sales_url') == 'custom_url' ) { ?>
                               <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
                             <?php }
                             else
@@ -292,7 +292,7 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
-                          elseif( get_field('custom_sales_url') ) { ?>
+                          elseif( get_field('custom_sales_url') == 'custom_url' ) { ?>
                             <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
                           <?php }
                           else
@@ -323,7 +323,7 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
-                          elseif( get_field('custom_sales_url') ) { ?>
+                          elseif( get_field('custom_sales_url') == 'custom_url' ) { ?>
                             <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
                           <?php }
                           else
@@ -354,7 +354,7 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
-                          elseif( get_field('custom_sales_url') ) { ?>
+                          elseif( get_field('custom_sales_url') == 'custom_url' ) { ?>
                             <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
                           <?php }
                           else
@@ -385,7 +385,7 @@ get_header(); ?>
                           {
                               echo "Ingen anmälan krävs";
                           }
-                          elseif( get_field('custom_sales_url') ) { ?>
+                          elseif( get_field('custom_sales_url') == 'custom_url' ) { ?>
                             <a href="<?php echo get_field('custom_event_page'); ?>">Anmälan</a>
                           <?php }
                           else
