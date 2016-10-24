@@ -13,13 +13,19 @@
  * @since  1.0.0
  */
 if ( ! function_exists( 'polefitness_cart_link' ) ) {
-  function polefitness_cart_link() {
+  function polefitness_cart_link()
+  {
+      $product = wp_kses_data( sprintf( '%d', WC()->cart->get_cart_contents_count() ) );
+
+      if ($product == 0 && strpos($_SERVER["REQUEST_URI"], '/butik/') !== 0) {
+          return false;
+      }
+
     ?>
       <a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'Visa varukorgen', 'polefitness' ); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/cart.svg" height="16" width="16">
         <span class="count">
-          <?php 
-            $product = wp_kses_data( sprintf( '%d', WC()->cart->get_cart_contents_count() ) );
+          <?php
             if($product == 1) {
               echo $product . ' <span class="product">vara</span>';
             }
