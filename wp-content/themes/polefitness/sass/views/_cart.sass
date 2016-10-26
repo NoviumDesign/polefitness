@@ -3,8 +3,24 @@
     table-layout: auto
   .product-remove
     text-align: center
-  th.product-thumbnail
+  th.product-remove,
+  td.product-remove
+    width: 60px
+  th.product-thumbnail,
+  td.product-thumbnail
     width: 85px
+  th.product-name,
+  td.product-name
+    width: calc(100% - 325px)
+  th.product-price,
+  td.product-price
+    width: 60px
+  th.product-quantity,
+  td.product-quantity
+    width: 60px
+  th.product-subtotal,
+  td.product-subtotal
+    width: 60px
   .product-price,
   .product-quantity,
   .product-name,
@@ -35,6 +51,7 @@
       display: inline-block
       input
         width: 50px
+        margin-bottom: 0
 
   .cart-update
     margin-bottom: 0.75em

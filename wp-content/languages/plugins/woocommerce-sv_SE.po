@@ -4056,6 +4056,10 @@ msgstr "Översättningar har installerats/uppdaterats!"
 msgid "(Includes %s)"
 msgstr "(inkl. %s)"
 
+#: includes/wc-cart-functions.php:265
+msgid "(includes %s)"
+msgstr "(inkl. %s)"
+
 #: includes/class-wc-post-types.php:142
 msgid "Parent Shipping Class"
 msgstr "Förälder fraktklass"
