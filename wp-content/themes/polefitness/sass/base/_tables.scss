@@ -6,6 +6,12 @@ table {
   width: 100%;
 }
 
+.fc {
+  table {
+    margin: 0 !important;
+  }
+}
+
 th {
   border-bottom: 1px solid shade($base-border-color, 25%);
   font-weight: 600;

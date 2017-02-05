@@ -271,11 +271,14 @@ function create_posttype() {
  */
 function polefitness_scripts() {
 	wp_enqueue_style( 'polefitness-style', get_stylesheet_uri() );
+	wp_enqueue_style('fullcalendar', 'https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.css');
 
 	wp_enqueue_script( 'jquery-2', get_template_directory_uri() . '/js/vendor/jquery-2.1.4.min.js', array(), '2.1.4', true );
 	wp_enqueue_script( 'jquery-form-validator', '//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js', array(), '2.2.8', true );
   wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array(), '2.0.0-beta.2.4', true );
-	wp_enqueue_script( 'polefitness-app', get_template_directory_uri() . '/js/app.js', array(), '0001', true );
+    wp_enqueue_script( 'moment', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js', array(), '2.9.0', true);
+    wp_enqueue_script( 'fullcalendar', 'https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js', array(), '3.1.0', true );
+    wp_enqueue_script( 'polefitness-app', get_template_directory_uri() . '/js/app.js', array(), '0001', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
