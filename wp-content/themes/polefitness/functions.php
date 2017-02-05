@@ -278,6 +278,7 @@ function polefitness_scripts() {
   wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array(), '2.0.0-beta.2.4', true );
     wp_enqueue_script( 'moment', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js', array(), '2.9.0', true);
     wp_enqueue_script( 'fullcalendar', 'https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js', array(), '3.1.0', true );
+    wp_enqueue_script( 'bootstrap-tooltip', get_template_directory_uri() . '/js/bootstrap-tooltip.js', array(), '2.2.2', true );
     wp_enqueue_script( 'polefitness-app', get_template_directory_uri() . '/js/app.js', array(), '0001', true );
 
 

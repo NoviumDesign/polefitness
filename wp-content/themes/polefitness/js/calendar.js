@@ -4,8 +4,8 @@ $(document).ready(function() {
             $('#calendar').fullCalendar({
                 header: {
 
-                    right: 'prev,next today',
-                    center: 'title',
+                    right: 'title prev,next today',
+                    center: '',
                     left: ''
                 },
                 customButtons: {
@@ -15,6 +15,26 @@ $(document).ready(function() {
                             $('#calendar').fullCalendar('today');
                         }
                     }
+                },
+                height: 1200,
+                eventRender: function(event, element) {
+                    console.log(event);
+                    var toolTipTitle = event.title;
+
+                    if (event._allDay !== true) {
+                        toolTipTitle =
+                            event.start._d.getHours() + ":" +
+                            (event.start._d.getMinutes() < 10 ? "0" : "") + event.start._d.getMinutes() + " - " +
+                            event.end._d.getHours() + ":" +
+                            (event.end._d.getMinutes() < 10 ? "0" : "") + event.end._d.getMinutes() +
+                            "<br><strong>" + toolTipTitle + "</strong>";
+                    }
+
+                    $(element).tooltip({
+                        title: toolTipTitle,
+                        html: true,
+                        placement: 'bottom'
+                    });
                 },
                 editable: false,
                 defaultView: 'agendaWeek',
