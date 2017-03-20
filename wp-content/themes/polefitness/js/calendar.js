@@ -3,7 +3,6 @@ $(document).ready(function() {
         $.getJSON('/events.json', function (json) {
             $('#calendar').fullCalendar({
                 header: {
-
                     right: 'title prev,next today',
                     center: '',
                     left: ''
@@ -12,20 +11,22 @@ $(document).ready(function() {
                     today: {
                         text: 'Idag',
                         click: function () {
-                            $('#calendar').fullCalendar('today');
+                            $('#calendar').fullCalendar('prev');
                         }
                     }
                 },
                 height: 1200,
                 eventRender: function(event, element) {
-                    console.log(event);
                     var toolTipTitle = event.title;
 
                     if (event._allDay !== true) {
+                        var startHour = event.start._d.getHours() - 1;
+                        var endHour = event.end._d.getHours() - 1;
+
                         toolTipTitle =
-                            event.start._d.getHours() + ":" +
+                            startHour + ":" +
                             (event.start._d.getMinutes() < 10 ? "0" : "") + event.start._d.getMinutes() + " - " +
-                            event.end._d.getHours() + ":" +
+                            endHour + ":" +
                             (event.end._d.getMinutes() < 10 ? "0" : "") + event.end._d.getMinutes() +
                             "<br><strong>" + toolTipTitle + "</strong>";
                     }
@@ -44,7 +45,8 @@ $(document).ready(function() {
                 timeFormat: 'H:mm',
                 slotLabelFormat: 'H:mm',
                 minTime: '06:00',
-                allDayText: ''
+                allDayText: '',
+                timezone: 'UTC'
             });
         });
     }
