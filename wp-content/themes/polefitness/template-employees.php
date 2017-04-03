@@ -30,12 +30,23 @@ get_header(); ?>
     ?>
 
     <div class="employee">
+        <?php
+            $instagram = get_post_custom_values('instagram', get_the_ID());
 
-      <?php the_post_thumbnail( 'employees' ); ?>
+            if (null !== $instagram) {
+                $instagram = array_pop($instagram);
+            }
+        ?>
 
-      <h3><?php the_title(); ?></h3>
+        <?php the_post_thumbnail( 'employees' ); ?>
 
-      <?php the_content(); ?>
+        <h3><?php the_title(); ?></h3>
+
+        <?php if ($instagram !== null): ?>
+            <a href="https://www.instagram.com/<?php echo $instagram; ?>">@<?php echo $instagram; ?></a>
+        <?php endif; ?>
+
+        <?php the_content(); ?>
 
     </div>
 

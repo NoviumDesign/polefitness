@@ -256,7 +256,9 @@ function create_posttype() {
         'title',
         'editor',
         'thumbnail',
-        'page-attributes'
+        'page-attributes',
+        'custom-fields'
+
       ),
       'public' => true,
       'has_archive' => false,

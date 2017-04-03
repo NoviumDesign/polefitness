@@ -20,8 +20,8 @@ $(document).ready(function() {
                     var toolTipTitle = event.title;
 
                     if (event._allDay !== true) {
-                        var startHour = event.start._d.getHours() - 1;
-                        var endHour = event.end._d.getHours() - 1;
+                        var startHour = event.start._d.getHours() - 2;
+                        var endHour = event.end._d.getHours() - 2;
 
                         toolTipTitle =
                             startHour + ":" +
@@ -45,8 +45,7 @@ $(document).ready(function() {
                 timeFormat: 'H:mm',
                 slotLabelFormat: 'H:mm',
                 minTime: '06:00',
-                allDayText: '',
-                timezone: 'UTC'
+                allDayText: ''
             });
         });
     }
