@@ -20,8 +20,13 @@ $(document).ready(function() {
                     var toolTipTitle = event.title;
 
                     if (event._allDay !== true) {
-                        var startHour = event.start._d.getHours() - 2;
-                        var endHour = event.end._d.getHours() - 2;
+                        var startHour = event.start._d.getHours() - 1;
+
+                        if (event.end === null) {
+                            event.end = event.start;
+                        }
+
+                        var endHour = event.end._d.getHours() - 1;
 
                         toolTipTitle =
                             startHour + ":" +
